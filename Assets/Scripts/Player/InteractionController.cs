@@ -3,34 +3,31 @@ using UnityEngine.InputSystem;
 
 public class InteractionController : MonoBehaviour
 {
-    [SerializeField] Camera playerCamera;
-
-    [SerializeField] float interactionDistance = 0.5f;
-
     IInteractable currentInteractable;
 
-    public void Update()
+    public void OnTriggerEnter2D(Collider2D collider)
     {
-        UpdateCurrentInteractable();
-
-        CheckInteraction();
+        var maybeInteractable = collider.transform.root.GetComponent<IInteractable>();
+        if (maybeInteractable != null)
+        {
+            currentInteractable = maybeInteractable;
+        }
     }
 
-    void UpdateCurrentInteractable()
+    public void OnTriggerExit2D(Collider2D collider)
     {
-        var ray = playerCamera.ViewportPointToRay(new Vector2(0.5f, 0.5f));
-
-        Physics.Raycast(ray, out var hit, interactionDistance);
-
-        currentInteractable = hit.collider?.GetComponent<IInteractable>();
+        var maybeInteractable = collider.transform.root.GetComponent<IInteractable>();
+        if (maybeInteractable == currentInteractable)
+        {
+            currentInteractable = null;
+        }
     }
 
-    void CheckInteraction()
+    public void CheckInteraction(InputAction.CallbackContext ctx)
     {
-        if (Keyboard.current.eKey.wasPressedThisFrame && currentInteractable != null)
+        if (ctx.performed && currentInteractable != null)
         {
             currentInteractable.Interact();
         }
     }
-
 }

@@ -20,6 +20,7 @@ public class MovementControl : MonoBehaviour
     public float JumpForce;
     [SerializeField] float jumpBufferTime = 0.05f;
     float jumpBufferCounter = 0f;
+    [SerializeField] float dashForce = 5.0f;
     [SerializeField] float riseGravity = 1.0f;
     [SerializeField] float fallGravity = 1.5f;
 
@@ -30,8 +31,10 @@ public class MovementControl : MonoBehaviour
     [SerializeField] private float lJoyHReadValue, lJoyVReadValue;
 
     public bool IsGrounded => isGrounded;
-    [SerializeField] bool isGrounded, canClimb, isClimbing, isDropping;
-    //[SerializeField] int jumpCounter = 0, maxJumps = 1;
+    [SerializeField] bool isGrounded, canDash;
+    private bool isDashing;
+    public bool IsDashing { get => isDashing; }
+    [SerializeField] int jumpCounter = 0, maxJumps = 1;
     [SerializeField] float coyoteCounter, coyoteTimer;
     [SerializeField] BoxGroundController boxGroundController;
 
@@ -57,6 +60,7 @@ public class MovementControl : MonoBehaviour
         if (isGrounded)
         {
             coyoteCounter = coyoteTimer;
+            jumpCounter = 0;
         }
         else
         {
@@ -146,26 +150,6 @@ public class MovementControl : MonoBehaviour
     {
         float yVelocity = rb2d.linearVelocity.y;
 
-        if (canClimb)
-        {
-            if (lJoyVReadValue != 0)
-            {
-                if (!isClimbing)
-                {
-                    isClimbing = true;
-                    rb2d.gravityScale = 0f;
-                }
-                else
-                {
-                    yVelocity = MovementSpeed * lJoyVReadValue;
-                }
-            }
-            else if (isClimbing)
-            {
-                yVelocity = 0f;
-            }
-        }
-
         return yVelocity;
     }
 
@@ -175,12 +159,16 @@ public class MovementControl : MonoBehaviour
     }
     private void Jump()
     {
-        if (!isClimbing && rb2d.linearVelocity.y > 0.01f)
+        if (rb2d.linearVelocity.y > 0.01f)
             return;
 
-
-        if ((coyoteCounter > 0 || isClimbing) && jumpBufferCounter > 0)
+        if (jumpBufferCounter > 0)
         {
+            if (maxJumps == 1 && coyoteCounter < 0)
+                return;
+
+            jumpCounter++;
+
             //if (isClimbing)
             //{
             //    NotClimbing();
@@ -194,14 +182,23 @@ public class MovementControl : MonoBehaviour
             rb2d.linearVelocity = new Vector2(rb2d.linearVelocity.x, 0);
             rb2d.AddForce(Vector2.up * JumpForce, ForceMode2D.Impulse);
             jumpBufferCounter = 0f;
+
         }
     }
     public void JumpAction(InputAction.CallbackContext ctx)
     {
-        if (ctx.performed)
+        if (ctx.performed && jumpCounter < maxJumps)
         {
             jumpBufferCounter = jumpBufferTime;
         }
+    }
+
+    public void DashAction(InputAction.CallbackContext ctx)
+    {
+        if (!ctx.performed)
+            return;
+
+        rb2d.AddForce(Vector2.right * (Localanimator.GetBool("FlipX") ? dashForce : -dashForce));
     }
 
     //private void OnTriggerStay2D(Collider2D collision)

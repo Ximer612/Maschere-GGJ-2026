@@ -5,7 +5,7 @@ public class SubtitleTrigger : SubtitleTriggerer
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (hasPlayedOnce || !collision.gameObject.CompareTag("LocalPlayer"))
+        if (hasPlayedOnce)
             return;
 
         TriggerSubtitle();
