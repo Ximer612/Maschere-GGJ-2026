@@ -16,8 +16,6 @@ public class SubtitlesManager : MonoBehaviour
 
     [SerializeField] GameObject ToSkipText, ToContinuePress, KeyToPress;
 
-    string keyboardKeys, xboxKeys, playKeys;
-
     AudioClip charAudio;
     string textToShow;
     bool shouldDisappearBox = false;
@@ -133,7 +131,7 @@ public class SubtitlesManager : MonoBehaviour
         }
     }
 
-    public static void PlayDialogue(string newTextToShow, Sprite newSpeakerAvatar, AudioClip charAudio, string keyboardKeys = "", string xboxKeys = "", string playstationKeys = "")
+    public static void PlayDialogue(string newTextToShow, Sprite newSpeakerAvatar, AudioClip charAudio, string keyboardKeys = "")
     {
         Singleton.skipToEnd = false;
 
@@ -148,10 +146,6 @@ public class SubtitlesManager : MonoBehaviour
 
         Singleton.shouldDisappearBox = false;
         Singleton.charAudio = charAudio;
-
-        Singleton.keyboardKeys = keyboardKeys;
-        Singleton.xboxKeys = xboxKeys;
-        Singleton.playKeys = playstationKeys;
 
         Singleton.ToSkipText.SetActive(true);
         Singleton.ToContinuePress.SetActive(false);

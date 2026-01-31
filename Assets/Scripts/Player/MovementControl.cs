@@ -20,6 +20,7 @@ public class MovementControl : MonoBehaviour
     public float JumpForce;
     [SerializeField] float jumpBufferTime = 0.05f;
     float jumpBufferCounter = 0f;
+    [SerializeField] float dashForce = 5.0f;
     [SerializeField] float riseGravity = 1.0f;
     [SerializeField] float fallGravity = 1.5f;
 
@@ -31,7 +32,9 @@ public class MovementControl : MonoBehaviour
 
     public bool IsGrounded => isGrounded;
     [SerializeField] bool isGrounded, canDash;
-    //[SerializeField] int jumpCounter = 0, maxJumps = 1;
+    private bool isDashing;
+    public bool IsDashing { get => isDashing; }
+    [SerializeField] int jumpCounter = 0, maxJumps = 1;
     [SerializeField] float coyoteCounter, coyoteTimer;
     [SerializeField] BoxGroundController boxGroundController;
 
@@ -57,6 +60,7 @@ public class MovementControl : MonoBehaviour
         if (isGrounded)
         {
             coyoteCounter = coyoteTimer;
+            jumpCounter = 0;
         }
         else
         {
@@ -158,9 +162,13 @@ public class MovementControl : MonoBehaviour
         if (rb2d.linearVelocity.y > 0.01f)
             return;
 
-
-        if ((coyoteCounter > 0) && jumpBufferCounter > 0)
+        if (jumpBufferCounter > 0)
         {
+            if (maxJumps == 1 && coyoteCounter < 0)
+                return;
+
+            jumpCounter++;
+
             //if (isClimbing)
             //{
             //    NotClimbing();
@@ -174,14 +182,23 @@ public class MovementControl : MonoBehaviour
             rb2d.linearVelocity = new Vector2(rb2d.linearVelocity.x, 0);
             rb2d.AddForce(Vector2.up * JumpForce, ForceMode2D.Impulse);
             jumpBufferCounter = 0f;
+
         }
     }
     public void JumpAction(InputAction.CallbackContext ctx)
     {
-        if (ctx.performed)
+        if (ctx.performed && jumpCounter < maxJumps)
         {
             jumpBufferCounter = jumpBufferTime;
         }
+    }
+
+    public void DashAction(InputAction.CallbackContext ctx)
+    {
+        if (!ctx.performed)
+            return;
+
+        rb2d.AddForce(Vector2.right * (Localanimator.GetBool("FlipX") ? dashForce : -dashForce));
     }
 
     //private void OnTriggerStay2D(Collider2D collision)

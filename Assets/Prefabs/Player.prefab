@@ -56,15 +56,16 @@ MonoBehaviour:
   timeToDecelerate: 0.1
   JumpForce: 10
   jumpBufferTime: 0.05
+  dashForce: 5
   riseGravity: 1
   fallGravity: 1.5
   Localanimator: {fileID: 8306598353610451812}
   lJoyHReadValue: 0
   lJoyVReadValue: 0
   isGrounded: 0
-  canClimb: 0
-  isClimbing: 0
-  isDropping: 0
+  canDash: 0
+  jumpCounter: 0
+  maxJumps: 2
   coyoteCounter: 0
   coyoteTimer: 0
   boxGroundController: {fileID: 3882574875710948376}
@@ -158,7 +159,19 @@ MonoBehaviour:
     m_ActionId: d16d2cab-82da-4c99-a653-9f544f48c72c
     m_ActionName: 'UiMenu/Back[/Keyboard/backspace]'
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8934636235294886599}
+        m_TargetAssemblyTypeName: MovementControl, Assembly-CSharp
+        m_MethodName: DashAction
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 300d1a5d-d63a-4dbc-a892-a1460bfb128a
     m_ActionName: 'PlayerActionMapping/Dash[/Keyboard/shift]'
   m_NeverAutoSwitchControlSchemes: 0
@@ -274,8 +287,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c303f22e7aaf88bebf4970b4a401354, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InteractionController
-  playerCamera: {fileID: 0}
-  interactionDistance: 0.5
 --- !u!1 &1728527454837006555
 GameObject:
   m_ObjectHideFlags: 0

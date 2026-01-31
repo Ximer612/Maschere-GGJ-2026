@@ -5,7 +5,7 @@ public class SubtitleTriggerer : MonoBehaviour
     [SerializeField] Sprite speakerAvatar;
     [SerializeField][Multiline] string dialogueToPlay;
     [SerializeField] AudioClip charAudio;
-    [SerializeField] string keyboardKeys = "", gamepadKeys = "", playstationKeys = "";
+    [SerializeField] string keyboardKeys = "";
     [SerializeField] protected bool hasPlayedOnce = false;
 
     protected bool playOnlyOnce = true;
@@ -27,7 +27,7 @@ public class SubtitleTriggerer : MonoBehaviour
     [ContextMenu("DebugTriggerSubtitle")]
     private void PlayDialogue()
     {
-        SubtitlesManager.PlayDialogue(dialogueToPlay, speakerAvatar, charAudio, keyboardKeys, gamepadKeys, playstationKeys);
+        SubtitlesManager.PlayDialogue(dialogueToPlay, speakerAvatar, charAudio, keyboardKeys);
     }
 
     public void SetDialogueToPlay(string newDialogue) => dialogueToPlay = newDialogue;
