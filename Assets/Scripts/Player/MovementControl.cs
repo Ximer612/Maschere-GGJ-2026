@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class MovementControl : MonoBehaviour
 {
-    PlayerInput pInput;
+    [SerializeField] PlayerInput pInput;
     public float DefaultMovementSpeed { get; private set; }
     public float MovementSpeed;
     [SerializeField] float timeToAccelerate = 0.2f;
@@ -41,12 +41,6 @@ public class MovementControl : MonoBehaviour
 
     void Start()
     {
-        if (!transform.root.CompareTag("LocalPlayer"))
-        {
-            enabled = false;
-            return;
-        }
-
         DefaultMovementSpeed = MovementSpeed;
 
         rb2d = GetComponent<Rigidbody2D>();
@@ -54,8 +48,6 @@ public class MovementControl : MonoBehaviour
         coyoteTimer = 0.2f;
 
         //stepOnTimer = new Timer(0.02f, true);
-
-        pInput = gameObject.GetComponent<PlayerInput>();
     }
 
     void Update()
@@ -124,16 +116,12 @@ public class MovementControl : MonoBehaviour
         }
         else
         {
-            //if (netcodePlayer)
-            //{
-            //    netcodePlayer.hspeed_particle.Value = 0;
-            //}
             Localanimator.SetFloat("HVelocity", -1);
         }
 
         if (rb2d.linearVelocity.y < 1f)
         {
-            Localanimator.SetBool("bIsLanded", isGrounded /*&& Mathf.Abs(rb2d.linearVelocity.y) < 1.5f*/);
+            Localanimator.SetBool("bIsLanded", isGrounded);
         }
     }
 

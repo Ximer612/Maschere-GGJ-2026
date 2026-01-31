@@ -866,6 +866,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6936882347117520890, guid: 6f93f56106c48d247ba3675385a74f34, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1238143845, guid: a67ea05dc671b464bacf71e1c818799f, type: 3}
+    - target: {fileID: 8457964966993426771, guid: 6f93f56106c48d247ba3675385a74f34, type: 3}
+      propertyPath: playerCamera
+      value: 
+      objectReference: {fileID: 519420031}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -879,6 +887,15 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 324566021527598637, guid: 6f93f56106c48d247ba3675385a74f34, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5068526896006180579}
+    - targetCorrespondingSourceObject: {fileID: 324566021527598637, guid: 6f93f56106c48d247ba3675385a74f34, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5068526896006180581}
+    - targetCorrespondingSourceObject: {fileID: 324566021527598637, guid: 6f93f56106c48d247ba3675385a74f34, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5068526896006180583}
+    - targetCorrespondingSourceObject: {fileID: 324566021527598637, guid: 6f93f56106c48d247ba3675385a74f34, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5068526896006180582}
     - targetCorrespondingSourceObject: {fileID: 7087890809492393051, guid: 6f93f56106c48d247ba3675385a74f34, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5068526896006180580}
@@ -910,10 +927,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4311941ea74e0c4d95cbabd8cbb626d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MovementControl
-  MovementSpeed: 1
+  pInput: {fileID: 5068526896006180581}
+  MovementSpeed: 10
   timeToAccelerate: 0.2
   timeToDecelerate: 0.1
-  JumpForce: 0
+  JumpForce: 10
   jumpBufferTime: 0.05
   riseGravity: 1
   fallGravity: 1.5
@@ -937,7 +955,7 @@ Animator:
   m_GameObject: {fileID: 5068526896006180577}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c5194535034a87b44b473f7834fee48e, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -949,6 +967,168 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &5068526896006180581
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5068526896006180576}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.PlayerInput
+  m_Actions: {fileID: -944628639613478452, guid: 246dbc19940e02645bacddd97cc95a8e, type: 3}
+  m_NotificationBehavior: 2
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5068526896006180579}
+        m_TargetAssemblyTypeName: MovementControl, Assembly-CSharp
+        m_MethodName: HMovementPlayerInput
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 2e2ada43-936c-4489-a207-dc2f16fe2a3f
+    m_ActionName: 'PlayerActionMapping/Horizontal Movement[/Keyboard/a,/Keyboard/d]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5068526896006180579}
+        m_TargetAssemblyTypeName: MovementControl, Assembly-CSharp
+        m_MethodName: VMovementPlayerInput
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 6f8cbf74-b441-49f5-8561-aced0c196fb1
+    m_ActionName: 'PlayerActionMapping/Vertical Movement[/Keyboard/s,/Keyboard/w]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5068526896006180579}
+        m_TargetAssemblyTypeName: MovementControl, Assembly-CSharp
+        m_MethodName: JumpAction
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: dfaee131-2159-4484-90cf-debb1baa0461
+    m_ActionName: 'PlayerActionMapping/JumpAction[/Keyboard/space]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 53e2ffe4-6a3f-4854-9a43-e0279b907d9e
+    m_ActionName: 'PlayerActionMapping/Interact[/Keyboard/e]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 97db3359-c4ab-43d4-80e2-0cedaec21f2f
+    m_ActionName: 'PlayerActionMapping/EscMenu[/Keyboard/escape]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: ddd0b534-b827-424b-83bc-0c7f91ea1ece
+    m_ActionName: 'UiMenu/EscMenu[/Keyboard/escape]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: d16d2cab-82da-4c99-a653-9f544f48c72c
+    m_ActionName: 'UiMenu/Back[/Keyboard/backspace]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 300d1a5d-d63a-4dbc-a892-a1460bfb128a
+    m_ActionName: 'PlayerActionMapping/Dash[/Keyboard/shift]'
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: PlayerActionMapping
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
+--- !u!70 &5068526896006180582
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5068526896006180576}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 0.5, y: 1}
+  m_Direction: 0
+--- !u!50 &5068526896006180583
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5068526896006180576}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 5
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 4
 --- !u!1001 &7150544483348573992
 PrefabInstance:
   m_ObjectHideFlags: 0
