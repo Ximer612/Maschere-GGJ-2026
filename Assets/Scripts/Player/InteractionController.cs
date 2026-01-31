@@ -1,12 +1,7 @@
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 public class InteractionController : MonoBehaviour
 {
-    [SerializeField] Camera playerCamera;
-
-    [SerializeField] float interactionDistance = 0.5f;
-
     IInteractable currentInteractable;
 
     public void OnTriggerEnter2D(Collider2D collider)
