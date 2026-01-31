@@ -19,6 +19,7 @@ public class MovementControl : MonoBehaviour
 
     public float JumpForce;
     [SerializeField] float jumpBufferTime = 0.05f;
+    [SerializeField] float dashTime = 2f, dashCooldown = 2f;
     float jumpBufferCounter = 0f;
     [SerializeField] float dashForce = 5.0f;
     [SerializeField] float riseGravity = 1.0f;
@@ -37,6 +38,7 @@ public class MovementControl : MonoBehaviour
     [SerializeField] int jumpCounter = 0, maxJumps = 1;
     [SerializeField] float coyoteCounter, coyoteTimer;
     [SerializeField] BoxGroundController boxGroundController;
+    [SerializeField] TrailRenderer trailRenderer;
 
     private float defaultPlayerGravity;
 
@@ -67,6 +69,9 @@ public class MovementControl : MonoBehaviour
             coyoteCounter -= Time.deltaTime;
         }
 
+        if (isDashing)
+            return;
+
         ProcessHMovement();
         //ProcessVMovement();
 
@@ -92,10 +97,13 @@ public class MovementControl : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (rb2d.linearVelocity.y < 0)
-            rb2d.gravityScale = defaultPlayerGravity * fallGravity;
-        else
-            rb2d.gravityScale = defaultPlayerGravity * riseGravity;
+        if(!isDashing)
+        {
+            if (rb2d.linearVelocity.y < 0)
+                rb2d.gravityScale = defaultPlayerGravity * fallGravity;
+            else
+                rb2d.gravityScale = defaultPlayerGravity * riseGravity;
+        }
 
         if (jumpBufferCounter > 0)
         {
@@ -195,10 +203,26 @@ public class MovementControl : MonoBehaviour
 
     public void DashAction(InputAction.CallbackContext ctx)
     {
-        if (!ctx.performed)
+        if (!ctx.performed || !canDash)
             return;
 
-        rb2d.AddForce(Vector2.right * (Localanimator.GetBool("FlipX") ? dashForce : -dashForce));
+        StartCoroutine(ContinueDashing());
+    }
+
+    private IEnumerator ContinueDashing()
+    {
+        canDash = false;
+        isDashing = true;
+        float oldGravity = rb2d.gravityScale;
+        rb2d.gravityScale = 0;
+        rb2d.linearVelocity = Vector2.right * (Localanimator.GetBool("FlipX") ? -dashForce : dashForce);
+        trailRenderer.emitting = true;
+        yield return new WaitForSeconds(dashTime);
+        trailRenderer.emitting = false;
+        rb2d.gravityScale = oldGravity;
+        isDashing = false;
+        yield return new WaitForSeconds(dashCooldown);
+        canDash = true;
     }
 
     //private void OnTriggerStay2D(Collider2D collision)
