@@ -11,7 +11,6 @@ public class Door : MonoBehaviour, IInteractable
 
     void IInteractable.Interact()
     {
-        Debug.Log("INTERACTION");
         OnInteract.Invoke();
     }
 }

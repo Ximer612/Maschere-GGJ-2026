@@ -7,21 +7,28 @@ public struct Mask
     public Mask(MaskEnum iMask, MaskStatusEnum iStatus)
     {
         mask = iMask;
-        status = iStatus;
+        Status = iStatus;
     }
 
     public MaskEnum mask;
-    public MaskStatusEnum status;
+    public MaskStatusEnum Status;
 }
 
 public class Inventory : MonoBehaviour
 {
+    private static Inventory Singleton;
+
     public Dictionary<MaskEnum, MaskStatusEnum> masks = new Dictionary<MaskEnum, MaskStatusEnum>();
     public List<Mask> readonlyMasksArray;
 
     public void Awake()
     {
-        InitializeMasks();
+        if (Singleton == null)
+        {
+            Singleton = this;
+            InitializeMasks();
+        }
+
     }
 
     void InitializeMasks()
@@ -34,21 +41,21 @@ public class Inventory : MonoBehaviour
         }
     }
 
-    public void SetMaskStatus(MaskEnum mask, MaskStatusEnum status)
+    public void SetArlecchinoBroken() { setMaskStatus(MaskEnum.Arlecchino, MaskStatusEnum.BROKEN); }
+
+    private void setMaskStatus(MaskEnum mask, MaskStatusEnum status)
     {
         masks[mask] = status;
-        var arrayMask = readonlyMasksArray.Find((aMask) => aMask.mask == mask);
-        arrayMask.mask = mask;
-        arrayMask.status = status;
+        Debug.Log($"Set {mask} to {status}");
     }
 }
 
-public enum MaskEnum
+public enum MaskEnum : int
 {
     Arlecchino,
 }
 
-public enum MaskStatusEnum
+public enum MaskStatusEnum : int
 {
     MISSING,
     BROKEN,
