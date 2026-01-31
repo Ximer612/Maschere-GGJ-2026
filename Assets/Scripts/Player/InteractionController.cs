@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class InteractionController : MonoBehaviour
 {
@@ -19,6 +20,14 @@ public class InteractionController : MonoBehaviour
         if (maybeInteractable == currentInteractable)
         {
             currentInteractable = null;
+        }
+    }
+
+    public void CheckInteraction(InputAction.CallbackContext ctx)
+    {
+        if (currentInteractable != null)
+        {
+            currentInteractable.Interact();
         }
     }
 }
