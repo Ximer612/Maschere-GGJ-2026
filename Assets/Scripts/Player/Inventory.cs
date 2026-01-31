@@ -16,12 +16,19 @@ public struct Mask
 
 public class Inventory : MonoBehaviour
 {
+    private static Inventory Singleton;
+
     public Dictionary<MaskEnum, MaskStatusEnum> masks = new Dictionary<MaskEnum, MaskStatusEnum>();
     public List<Mask> readonlyMasksArray;
 
     public void Awake()
     {
-        InitializeMasks();
+        if (Singleton == null)
+        {
+            Singleton = this;
+            InitializeMasks();
+        }
+
     }
 
     void InitializeMasks()

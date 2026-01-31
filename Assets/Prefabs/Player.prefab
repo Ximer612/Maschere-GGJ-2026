@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 2949681872662746144}
   - component: {fileID: 7293621951544304132}
   - component: {fileID: 2612035372152779383}
-  - component: {fileID: 3083526062151227675}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -284,19 +283,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c303f22e7aaf88bebf4970b4a401354, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InteractionController
---- !u!114 &3083526062151227675
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 324566021527598637}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab58b73fb447cbf8d8615cb6ee846e7a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Inventory
-  readonlyMasksArray: []
 --- !u!1 &1728527454837006555
 GameObject:
   m_ObjectHideFlags: 0
