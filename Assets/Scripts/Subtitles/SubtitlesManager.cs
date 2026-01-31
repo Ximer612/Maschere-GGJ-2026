@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
@@ -15,6 +16,7 @@ public class SubtitlesManager : MonoBehaviour
     [SerializeField] float disappearingTime = 1f;
 
     [SerializeField] GameObject ToSkipText, ToContinuePress, KeyToPress;
+    public static UnityEvent OnDialogClose;
 
     AudioClip charAudio;
     string textToShow;
@@ -34,6 +36,7 @@ public class SubtitlesManager : MonoBehaviour
 
         subtitlesTimer = new Timer(charPerSecond, true, false);
         disappearingTimer = new Timer(disappearingTime, false, false);
+        OnDialogClose = new UnityEvent();
     }
 
 
@@ -88,12 +91,7 @@ public class SubtitlesManager : MonoBehaviour
 
         if (shouldDisappearBox)
         {
-            if (disappearingTimer.Tick(Time.deltaTime))
-            {
-                ToSkipText.SetActive(false);
-                ToContinuePress.SetActive(true);
-                KeyToPress.SetActive(true);
-            }
+            CloseDialogBox();
         }
         else if (skipToEnd || subtitlesTimer.Tick(Time.deltaTime))
         {
@@ -113,7 +111,7 @@ public class SubtitlesManager : MonoBehaviour
             {
                 audioSource.PlayOneShot(charAudio);
             }
-                //AudioManager.Singleton.PlayOneShot(charAudio, Vector2.zero);
+            //AudioManager.Singleton.PlayOneShot(charAudio, Vector2.zero);
 
             if (newChar == '<')
             {
@@ -152,5 +150,17 @@ public class SubtitlesManager : MonoBehaviour
         Singleton.KeyToPress.SetActive(true);
 
         Singleton.enabled = true;
+    }
+
+    private void CloseDialogBox()
+    {
+        if (disappearingTimer.Tick(Time.deltaTime))
+        {
+            ToSkipText.SetActive(false);
+            ToContinuePress.SetActive(true);
+            KeyToPress.SetActive(true);
+
+            OnDialogClose.Invoke();
+        }
     }
 }
