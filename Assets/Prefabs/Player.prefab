@@ -77,6 +77,10 @@ MonoBehaviour:
   edgeGrabbing: {fileID: 150037640937541560}
   stillPressingJump: 0
   stillPressingGravityScaler: 0.5
+  shouldEdgeGrab: 0
+  isEdgeClimbing: 0
+  lastEdgeGrabTime: -1
+  edgeGrabAgainTime: 1
 --- !u!114 &8321883134567748770
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -331,13 +335,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9783505e2c26e8b438945cc9080c89a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EdgeGrabbing
-  forwardOffset: 0.6
-  upOffset: 0.5
-  downOffset: 0.6
+  forwardOffset: 0.35
+  upOffset: 0.4
+  downOffset: 0.5
   animator: {fileID: 8306598353610451812}
   layer:
     serializedVersion: 2
     m_Bits: 8
+  standOffsetY: 0.05
+  playerCollider: {fileID: 7293621951544304132}
+  prefabTest: {fileID: 5242306775083843111, guid: f393f2feb4f68da4381081fb26aab5bd, type: 3}
 --- !u!1 &1728527454837006555
 GameObject:
   m_ObjectHideFlags: 0
@@ -469,11 +476,11 @@ TrailRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Time: 5
+  m_Time: 0.5
   m_PreviewTimeScale: 1
   m_Parameters:
     serializedVersion: 3
-    widthMultiplier: 0.5
+    widthMultiplier: 0.1
     widthCurve:
       serializedVersion: 2
       m_Curve:
@@ -550,6 +557,7 @@ GameObject:
   - component: {fileID: 4722754299705905108}
   - component: {fileID: 6936882347117520890}
   - component: {fileID: 8306598353610451812}
+  - component: {fileID: 4804853222109843439}
   m_Layer: 0
   m_Name: Sprite
   m_TagString: Untagged
@@ -621,7 +629,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 1670807366, guid: a67ea05dc671b464bacf71e1c818799f, type: 3}
+  m_Sprite: {fileID: 791845254, guid: a67ea05dc671b464bacf71e1c818799f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -641,7 +649,7 @@ Animator:
   m_GameObject: {fileID: 7087890809492393051}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: c5194535034a87b44b473f7834fee48e, type: 2}
+  m_Controller: {fileID: 9100000, guid: 729906e407e75314d82d988e082ba9a5, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -653,3 +661,17 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &4804853222109843439
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7087890809492393051}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94c49ce5c94534b46961c4134165d101, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FlipSprite
+  sr: {fileID: 6936882347117520890}
+  animator: {fileID: 8306598353610451812}

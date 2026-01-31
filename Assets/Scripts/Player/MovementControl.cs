@@ -1,9 +1,7 @@
 using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.SceneManagement;
 
 public class MovementControl : MonoBehaviour
 {
@@ -47,7 +45,8 @@ public class MovementControl : MonoBehaviour
 
     [SerializeField] bool stillPressingJump = false;
     [SerializeField] float stillPressingGravityScaler = 0.5f;
-    [SerializeField] bool shouldEdgeGrab = false;
+    [SerializeField] bool shouldEdgeGrab = false, isEdgeClimbing = false;
+    [SerializeField] float lastEdgeGrabTime = -1, edgeGrabAgainTime = 1f;
 
     void Start()
     {
@@ -56,7 +55,7 @@ public class MovementControl : MonoBehaviour
         rb2d = GetComponent<Rigidbody2D>();
         defaultPlayerGravity = rb2d.gravityScale;
         coyoteTimer = 0.2f;
-
+        trailRenderer.time = dashTime;
         //stepOnTimer = new Timer(0.02f, true);
     }
 
@@ -74,13 +73,14 @@ public class MovementControl : MonoBehaviour
         }
         else
         {
-            if(edgeGrabbing.Hitting)
+            if (edgeGrabbing.Hitting && !shouldEdgeGrab && Time.time - lastEdgeGrabTime > edgeGrabAgainTime)
             {
-                Debug.Log("Dovrei aggrapparmi cazzo");
+                lastEdgeGrabTime = Time.time;
+
+                shouldEdgeGrab = true;
                 rb2d.linearVelocity = Vector2.zero;
                 rb2d.gravityScale = 0f;
-                shouldEdgeGrab = true;
-                StartCoroutine(TeleportToEdge());
+                //StartCoroutine(TeleportToEdge());
                 return;
             }
 
@@ -123,7 +123,7 @@ public class MovementControl : MonoBehaviour
             if (rb2d.linearVelocity.y < 0)
             {
                 rb2d.gravityScale = defaultPlayerGravity * fallGravity;
- 
+
             }
             else
             {
@@ -172,6 +172,21 @@ public class MovementControl : MonoBehaviour
     public void HMovementPlayerInput(InputAction.CallbackContext ctx)
     {
         lJoyHReadValue = ctx.ReadValue<float>();
+
+        if (shouldEdgeGrab && ctx.performed)
+        {
+            bool dir = Localanimator.GetBool("FlipX") ? false : true;
+
+            if (dir && lJoyHReadValue > 0 || !dir && lJoyHReadValue < 0)
+            {
+                StartCoroutine(TeleportToEdge());
+            }
+            else if (!isEdgeClimbing)
+            {
+                shouldEdgeGrab = false;
+            }
+
+        }
     }
 
     //void ProcessVMovement()
@@ -229,6 +244,12 @@ public class MovementControl : MonoBehaviour
     {
         stillPressingJump = !ctx.canceled;
 
+        if (shouldEdgeGrab && ctx.performed && !isEdgeClimbing)
+        {
+            shouldEdgeGrab = false;
+            jumpCounter = 0;
+        }
+
         if (ctx.performed && jumpCounter < maxJumps)
         {
             jumpBufferCounter = jumpBufferTime;
@@ -251,7 +272,9 @@ public class MovementControl : MonoBehaviour
         rb2d.gravityScale = 0;
         rb2d.linearVelocity = Vector2.right * (Localanimator.GetBool("FlipX") ? -dashForce : dashForce);
         trailRenderer.emitting = true;
+        Localanimator.SetBool("bIsDashing", true);
         yield return new WaitForSeconds(dashTime);
+        Localanimator.SetBool("bIsDashing", false);
         trailRenderer.emitting = false;
         rb2d.gravityScale = oldGravity;
         isDashing = false;
@@ -261,14 +284,13 @@ public class MovementControl : MonoBehaviour
 
     private IEnumerator TeleportToEdge()
     {
-        float oldGravityScale = rb2d.gravityScale;
         shouldEdgeGrab = true;
-
-        yield return new WaitForSeconds(0.5f);
-        transform.position = edgeGrabbing.hits[0].point;
-
-        rb2d.gravityScale = oldGravityScale;
-
+        //rb2d.linearVelocity = Vector2.zero;
+        //rb2d.gravityScale = 0f;
+        isEdgeClimbing = true;
+        yield return new WaitForSeconds(0.25f);
+        transform.position = edgeGrabbing.standPoint;
+        isEdgeClimbing = false;
         shouldEdgeGrab = false;
     }
 
