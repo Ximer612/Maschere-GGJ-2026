@@ -44,6 +44,9 @@ public class MovementControl : MonoBehaviour
 
     public Action<Vector2> OnMoved;
 
+    [SerializeField] bool stillPressingJump = false;
+    [SerializeField] float stillPressingGravityScaler = 0.5f;
+
     void Start()
     {
         DefaultMovementSpeed = MovementSpeed;
@@ -100,9 +103,19 @@ public class MovementControl : MonoBehaviour
         if(!isDashing)
         {
             if (rb2d.linearVelocity.y < 0)
+            {
                 rb2d.gravityScale = defaultPlayerGravity * fallGravity;
+ 
+            }
             else
+            {
                 rb2d.gravityScale = defaultPlayerGravity * riseGravity;
+
+                if (stillPressingJump)
+                {
+                    rb2d.gravityScale *= stillPressingGravityScaler;
+                }
+            }
         }
 
         if (jumpBufferCounter > 0)
@@ -111,6 +124,7 @@ public class MovementControl : MonoBehaviour
         }
 
         Jump();
+
 
     }
     void ProcessHMovement()
@@ -167,8 +181,8 @@ public class MovementControl : MonoBehaviour
     }
     private void Jump()
     {
-        if (rb2d.linearVelocity.y > 0.01f)
-            return;
+        //if (rb2d.linearVelocity.y > 0.01f)
+        //    return;
 
         if (jumpBufferCounter > 0)
         {
@@ -195,6 +209,8 @@ public class MovementControl : MonoBehaviour
     }
     public void JumpAction(InputAction.CallbackContext ctx)
     {
+        stillPressingJump = !ctx.canceled;
+
         if (ctx.performed && jumpCounter < maxJumps)
         {
             jumpBufferCounter = jumpBufferTime;
@@ -203,7 +219,7 @@ public class MovementControl : MonoBehaviour
 
     public void DashAction(InputAction.CallbackContext ctx)
     {
-        if (!ctx.performed || !canDash)
+        if (!ctx.performed || !canDash || isDashing)
             return;
 
         StartCoroutine(ContinueDashing());
