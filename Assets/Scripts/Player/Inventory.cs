@@ -4,8 +4,14 @@ using System.Collections.Generic;
 [System.Serializable]
 public struct Mask
 {
+    public Mask(MaskEnum iMask, MaskStatusEnum iStatus)
+    {
+        mask = iMask;
+        status = iStatus;
+    }
+
     public MaskEnum mask;
-    public MaskStatusEnum maskStatusEnum;
+    public MaskStatusEnum status;
 }
 
 public class Inventory : MonoBehaviour
@@ -20,12 +26,20 @@ public class Inventory : MonoBehaviour
 
     void InitializeMasks()
     {
-        masks.Add(MaskEnum.Arlecchino, MaskStatusEnum.MISSING);
+        Debug.Log("Initializing Masks");
+        foreach (MaskEnum mask in (MaskEnum[])System.Enum.GetValues(typeof(MaskEnum)))
+        {
+            masks.Add(mask, MaskStatusEnum.MISSING);
+            readonlyMasksArray.Add(new Mask(mask, MaskStatusEnum.MISSING));
+        }
     }
 
     public void SetMaskStatus(MaskEnum mask, MaskStatusEnum status)
     {
         masks[mask] = status;
+        var arrayMask = readonlyMasksArray.Find((aMask) => aMask.mask == mask);
+        arrayMask.mask = mask;
+        arrayMask.status = status;
     }
 }
 
