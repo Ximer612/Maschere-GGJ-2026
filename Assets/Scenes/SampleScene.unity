@@ -1475,27 +1475,7 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
-  - first: {x: 5, y: 0, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 0
-      m_TileSpriteIndex: 0
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
   - first: {x: -6, y: 1, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 0
-      m_TileSpriteIndex: 0
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
-  - first: {x: 5, y: 1, z: 0}
     second:
       serializedVersion: 2
       m_TileIndex: 0
@@ -1515,25 +1495,15 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
-  - first: {x: 5, y: 2, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 0
-      m_TileSpriteIndex: 0
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
   m_AnimatedTiles: {}
   m_TileAssetArray:
-  - m_RefCount: 24
+  - m_RefCount: 21
     m_Data: {fileID: 11400000, guid: a6db964a8c2c0224eba7933f199b3d51, type: 2}
   m_TileSpriteArray:
-  - m_RefCount: 24
+  - m_RefCount: 21
     m_Data: {fileID: 1881560849, guid: a67ea05dc671b464bacf71e1c818799f, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 24
+  - m_RefCount: 21
     m_Data:
       e00: 1
       e01: 0
@@ -1552,7 +1522,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 24
+  - m_RefCount: 21
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
@@ -1620,9 +1590,9 @@ CompositeCollider2D:
   - m_Collider: {fileID: 1132076736}
     m_ColliderPaths:
     - - X: 60000000
-        Y: 30000000
+        Y: 0
       - X: 50000000
-        Y: 30000000
+        Y: 0
       - X: 50000000
         Y: -30000000
       - X: -50000000
@@ -1638,8 +1608,8 @@ CompositeCollider2D:
   m_CompositePaths:
     m_Paths:
     - - {x: 5.999971, y: -4}
-      - {x: 5.999971, y: 3}
-      - {x: 5, y: 2.999971}
+      - {x: 5.999971, y: 0}
+      - {x: 5, y: -0.000029300001}
       - {x: 4.9999704, y: -3}
       - {x: -5, y: -2.9999707}
       - {x: -5.000029, y: 3}
@@ -2139,6 +2109,10 @@ PrefabInstance:
     - target: {fileID: 5165844964586023173, guid: e285d7f19347aba47a43aa4bb080b451, type: 3}
       propertyPath: m_Name
       value: PauseMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 5165844964586023173, guid: e285d7f19347aba47a43aa4bb080b451, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

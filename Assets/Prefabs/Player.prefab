@@ -37,6 +37,7 @@ Transform:
   - {fileID: 4722754299705905108}
   - {fileID: 2786176585652859885}
   - {fileID: 1536206585242239743}
+  - {fileID: 2043654997749243605}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &8934636235294886599
@@ -73,6 +74,9 @@ MonoBehaviour:
   coyoteTimer: 2
   boxGroundController: {fileID: 3882574875710948376}
   trailRenderer: {fileID: 5317763316018853302}
+  edgeGrabbing: {fileID: 150037640937541560}
+  stillPressingJump: 0
+  stillPressingGravityScaler: 0.5
 --- !u!114 &8321883134567748770
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -283,6 +287,57 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c303f22e7aaf88bebf4970b4a401354, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InteractionController
+--- !u!1 &1636850151340862953
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2043654997749243605}
+  - component: {fileID: 150037640937541560}
+  m_Layer: 0
+  m_Name: EdgeGrab
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2043654997749243605
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1636850151340862953}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5569786994452108386}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &150037640937541560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1636850151340862953}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9783505e2c26e8b438945cc9080c89a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EdgeGrabbing
+  forwardOffset: 0.6
+  upOffset: 0.5
+  downOffset: 0.6
+  animator: {fileID: 8306598353610451812}
+  layer:
+    serializedVersion: 2
+    m_Bits: 8
 --- !u!1 &1728527454837006555
 GameObject:
   m_ObjectHideFlags: 0
@@ -327,7 +382,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 150cf76212f7e9d43abc035e1fb085ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoxGroundController
-  boxSize: {x: 0.7, y: 0.1}
+  boxSize: {x: 0.475, y: 0.1}
   offset: {x: 0, y: -0.06}
   castDistance: 0.5
   mask:

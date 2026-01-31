@@ -39,6 +39,7 @@ public class MovementControl : MonoBehaviour
     [SerializeField] float coyoteCounter, coyoteTimer;
     [SerializeField] BoxGroundController boxGroundController;
     [SerializeField] TrailRenderer trailRenderer;
+    [SerializeField] EdgeGrabbing edgeGrabbing;
 
     private float defaultPlayerGravity;
 
@@ -46,6 +47,7 @@ public class MovementControl : MonoBehaviour
 
     [SerializeField] bool stillPressingJump = false;
     [SerializeField] float stillPressingGravityScaler = 0.5f;
+    [SerializeField] bool shouldEdgeGrab = false;
 
     void Start()
     {
@@ -60,6 +62,9 @@ public class MovementControl : MonoBehaviour
 
     void Update()
     {
+        if (shouldEdgeGrab)
+            return;
+
         isGrounded = boxGroundController.IsGrounded;
 
         if (isGrounded)
@@ -69,6 +74,16 @@ public class MovementControl : MonoBehaviour
         }
         else
         {
+            if(edgeGrabbing.Hitting)
+            {
+                Debug.Log("Dovrei aggrapparmi cazzo");
+                rb2d.linearVelocity = Vector2.zero;
+                rb2d.gravityScale = 0f;
+                shouldEdgeGrab = true;
+                StartCoroutine(TeleportToEdge());
+                return;
+            }
+
             coyoteCounter -= Time.deltaTime;
         }
 
@@ -100,7 +115,10 @@ public class MovementControl : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if(!isDashing)
+        if (shouldEdgeGrab)
+            return;
+
+        if (!isDashing)
         {
             if (rb2d.linearVelocity.y < 0)
             {
@@ -239,6 +257,19 @@ public class MovementControl : MonoBehaviour
         isDashing = false;
         yield return new WaitForSeconds(dashCooldown);
         canDash = true;
+    }
+
+    private IEnumerator TeleportToEdge()
+    {
+        float oldGravityScale = rb2d.gravityScale;
+        shouldEdgeGrab = true;
+
+        yield return new WaitForSeconds(0.5f);
+        transform.position = edgeGrabbing.hits[0].point;
+
+        rb2d.gravityScale = oldGravityScale;
+
+        shouldEdgeGrab = false;
     }
 
     //private void OnTriggerStay2D(Collider2D collision)
