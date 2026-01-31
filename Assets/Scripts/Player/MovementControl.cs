@@ -30,7 +30,7 @@ public class MovementControl : MonoBehaviour
     [SerializeField] private float lJoyHReadValue, lJoyVReadValue;
 
     public bool IsGrounded => isGrounded;
-    [SerializeField] bool isGrounded, canClimb, isClimbing, isDropping;
+    [SerializeField] bool isGrounded, canDash;
     //[SerializeField] int jumpCounter = 0, maxJumps = 1;
     [SerializeField] float coyoteCounter, coyoteTimer;
     [SerializeField] BoxGroundController boxGroundController;
@@ -146,26 +146,6 @@ public class MovementControl : MonoBehaviour
     {
         float yVelocity = rb2d.linearVelocity.y;
 
-        if (canClimb)
-        {
-            if (lJoyVReadValue != 0)
-            {
-                if (!isClimbing)
-                {
-                    isClimbing = true;
-                    rb2d.gravityScale = 0f;
-                }
-                else
-                {
-                    yVelocity = MovementSpeed * lJoyVReadValue;
-                }
-            }
-            else if (isClimbing)
-            {
-                yVelocity = 0f;
-            }
-        }
-
         return yVelocity;
     }
 
@@ -175,11 +155,11 @@ public class MovementControl : MonoBehaviour
     }
     private void Jump()
     {
-        if (!isClimbing && rb2d.linearVelocity.y > 0.01f)
+        if (rb2d.linearVelocity.y > 0.01f)
             return;
 
 
-        if ((coyoteCounter > 0 || isClimbing) && jumpBufferCounter > 0)
+        if ((coyoteCounter > 0) && jumpBufferCounter > 0)
         {
             //if (isClimbing)
             //{

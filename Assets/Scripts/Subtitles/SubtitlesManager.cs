@@ -111,7 +111,7 @@ public class SubtitlesManager : MonoBehaviour
 
             char newChar = textToShow[currentCharIndex];
 
-            if (newChar != ' ')
+            if (newChar != ' ' && charAudio)
             {
                 audioSource.PlayOneShot(charAudio);
             }

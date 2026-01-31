@@ -7,7 +7,7 @@ public class InteractionController : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D collider)
     {
-        var maybeInteractable = collider.gameObject.GetComponent<IInteractable>();
+        var maybeInteractable = collider.transform.root.GetComponent<IInteractable>();
         if (maybeInteractable != null)
         {
             currentInteractable = maybeInteractable;
@@ -16,7 +16,7 @@ public class InteractionController : MonoBehaviour
 
     public void OnTriggerExit2D(Collider2D collider)
     {
-        var maybeInteractable = collider.gameObject.GetComponent<IInteractable>();
+        var maybeInteractable = collider.transform.root.GetComponent<IInteractable>();
         if (maybeInteractable == currentInteractable)
         {
             currentInteractable = null;
@@ -25,7 +25,7 @@ public class InteractionController : MonoBehaviour
 
     public void CheckInteraction(InputAction.CallbackContext ctx)
     {
-        if (currentInteractable != null)
+        if (ctx.performed && currentInteractable != null)
         {
             currentInteractable.Interact();
         }
