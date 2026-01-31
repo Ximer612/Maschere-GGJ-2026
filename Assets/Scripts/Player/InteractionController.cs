@@ -9,28 +9,21 @@ public class InteractionController : MonoBehaviour
 
     IInteractable currentInteractable;
 
-    public void Update()
+    public void OnTriggerEnter2D(Collider2D collider)
     {
-        UpdateCurrentInteractable();
-
-        CheckInteraction();
-    }
-
-    void UpdateCurrentInteractable()
-    {
-        var ray = playerCamera.ViewportPointToRay(new Vector2(0.5f, 0.5f));
-
-        Physics.Raycast(ray, out var hit, interactionDistance);
-
-        currentInteractable = hit.collider?.GetComponent<IInteractable>();
-    }
-
-    void CheckInteraction()
-    {
-        if (Keyboard.current.eKey.wasPressedThisFrame && currentInteractable != null)
+        var maybeInteractable = collider.gameObject.GetComponent<IInteractable>();
+        if (maybeInteractable != null)
         {
-            currentInteractable.Interact();
+            currentInteractable = maybeInteractable;
         }
     }
 
+    public void OnTriggerExit2D(Collider2D collider)
+    {
+        var maybeInteractable = collider.gameObject.GetComponent<IInteractable>();
+        if (maybeInteractable == currentInteractable)
+        {
+            currentInteractable = null;
+        }
+    }
 }
