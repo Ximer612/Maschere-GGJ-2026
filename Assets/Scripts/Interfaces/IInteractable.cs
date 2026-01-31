@@ -1,6 +1,5 @@
-using UnityEngine;
-
 public interface IInteractable
 {
-    void OnInteraction();
+    public string InteractMessage { get; }
+    public void Interact();
 }
