@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
@@ -6,6 +7,8 @@ public class PauseMenu : MonoBehaviour
 {
     public static bool isPaused = false;
     public GameObject pauseMenuUi;
+    [SerializeField] private AudioMixer generalMixer;
+    public AudioMixerGroup musicGroup, sfxGroup;
 
     void Start()
     {
@@ -40,6 +43,21 @@ public class PauseMenu : MonoBehaviour
 
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
+    }
+
+    public void SetGeneral(float sliderValue)
+    {
+        generalMixer.SetFloat("Master", Mathf.Log10(sliderValue) * 20);
+    }
+
+    public void SetSfxs(float sliderValue)
+    {
+        sfxGroup.audioMixer.SetFloat("SFX", Mathf.Log10(sliderValue) * 20);
+    }
+
+    public void SetMusics(float sliderValue)
+    {
+        musicGroup.audioMixer.SetFloat("Music", Mathf.Log10(sliderValue) * 20);
     }
 
     public void Quit()
