@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using Unity.Cinemachine;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using static UnityEngine.RuleTile.TilingRuleOutput;
@@ -39,6 +40,8 @@ public class MovementControl : MonoBehaviour
     [SerializeField] BoxGroundController boxGroundController;
     [SerializeField] TrailRenderer trailRenderer;
     [SerializeField] EdgeGrabbing edgeGrabbing;
+    [SerializeField] CinemachinePositionComposer cameraPositionComposer;
+    float defaultCameraYOffset;
     [SerializeField] float durationEdgeClimbing = 0.25f;
     Vector3 beforeEdgeClimbPosition;
     Timer edgeGrabTimer;
@@ -62,6 +65,8 @@ public class MovementControl : MonoBehaviour
         trailRenderer.time = dashTime;
         edgeGrabTimer = new Timer(durationEdgeClimbing, false,true);
         //stepOnTimer = new Timer(0.02f, true);
+
+        defaultCameraYOffset = cameraPositionComposer.TargetOffset.y;
     }
 
     void Update()
@@ -249,6 +254,16 @@ public class MovementControl : MonoBehaviour
     public void VMovementPlayerInput(InputAction.CallbackContext ctx)
     {
         lJoyVReadValue = ctx.ReadValue<float>();
+
+        if (ctx.performed)
+        {
+            cameraPositionComposer.TargetOffset.y = lJoyVReadValue > 0 ? defaultCameraYOffset * 1.5f : -defaultCameraYOffset;
+        }
+        else if(ctx.canceled)
+        {
+            cameraPositionComposer.TargetOffset.y = defaultCameraYOffset;
+        }
+
     }
     private void Jump()
     {
