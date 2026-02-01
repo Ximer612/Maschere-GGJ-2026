@@ -6412,11 +6412,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6360461184220200656, guid: 6af175fc2e3cfd9409afbcbc56b217d5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 673.66473
+      value: 647.52
       objectReference: {fileID: 0}
     - target: {fileID: 6360461184220200656, guid: 6af175fc2e3cfd9409afbcbc56b217d5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 334.58344
+      value: 338.61
       objectReference: {fileID: 0}
     - target: {fileID: 6564037867424155046, guid: 6af175fc2e3cfd9409afbcbc56b217d5, type: 3}
       propertyPath: m_AnchorMax.y
@@ -6468,11 +6468,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7490129407191219527, guid: 6af175fc2e3cfd9409afbcbc56b217d5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 677.66473
+      value: 651.52
       objectReference: {fileID: 0}
     - target: {fileID: 7490129407191219527, guid: 6af175fc2e3cfd9409afbcbc56b217d5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 335.88342
+      value: 339.90997
       objectReference: {fileID: 0}
     - target: {fileID: 7707022099755474966, guid: 6af175fc2e3cfd9409afbcbc56b217d5, type: 3}
       propertyPath: m_AnchorMax.y
@@ -6500,11 +6500,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8582596554138069177, guid: 6af175fc2e3cfd9409afbcbc56b217d5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 677.66473
+      value: 651.52
       objectReference: {fileID: 0}
     - target: {fileID: 8582596554138069177, guid: 6af175fc2e3cfd9409afbcbc56b217d5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 335.88342
+      value: 339.90997
       objectReference: {fileID: 0}
     - target: {fileID: 8878345439554950436, guid: 6af175fc2e3cfd9409afbcbc56b217d5, type: 3}
       propertyPath: m_AnchorMax.x
@@ -7078,7 +7078,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
