@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class GameplayManager : MonoBehaviour
 {
-    private static GameplayManager Singleton;
+    public static GameplayManager Singleton;
 
     [SerializeField]
     public int MaxHealth;
@@ -49,18 +49,6 @@ public class GameplayManager : MonoBehaviour
 
         return currentHealth == 0;
     }
-
-    // public void Heal(int amount = 1)
-    // {
-    //     if (currentHealth + amount <= MaxHealth)
-    //     {
-    //         currentHealth -= amount;
-    //     }
-    //     else
-    //     {
-    //         currentHealth = MaxHealth;
-    //     }
-    // }
 
     public void Die()
     {
