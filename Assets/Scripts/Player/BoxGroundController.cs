@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class BoxGroundController : MonoBehaviour
@@ -9,6 +10,8 @@ public class BoxGroundController : MonoBehaviour
     [SerializeField] Vector2 boxSize, offset;
     [SerializeField] float castDistance = 0.5f;
     [SerializeField] LayerMask mask;
+
+    public Action OnNewLand;
 
     void Update()
     {
@@ -31,6 +34,7 @@ public class BoxGroundController : MonoBehaviour
         if (wasGroundedLastFrame != IsGrounded && IsGrounded)
         {
             //dust?
+            OnNewLand?.Invoke();
         }
 
         wasGroundedLastFrame = IsGrounded;
