@@ -42,6 +42,7 @@ public class MovementControl : MonoBehaviour
     [SerializeField] EdgeGrabbing edgeGrabbing;
     [SerializeField] CinemachinePositionComposer cameraPositionComposer;
     float defaultCameraYOffset;
+    float defaultCameraXOffset;
     [SerializeField] float durationEdgeClimbing = 0.25f;
     Vector3 beforeEdgeClimbPosition;
     Timer edgeGrabTimer;
@@ -73,6 +74,7 @@ public class MovementControl : MonoBehaviour
         //stepOnTimer = new Timer(0.02f, true);
 
         defaultCameraYOffset = cameraPositionComposer.TargetOffset.y;
+        defaultCameraXOffset = cameraPositionComposer.TargetOffset.x;
 
         boxGroundController.OnNewLand += LandSound;
 
@@ -259,6 +261,12 @@ public class MovementControl : MonoBehaviour
             }
 
         }
+
+        if (ctx.performed)
+        {
+            cameraPositionComposer.TargetOffset.x = lJoyHReadValue > 0 ? defaultCameraXOffset : -defaultCameraXOffset;
+        }
+
     }
 
     //void ProcessVMovement()
