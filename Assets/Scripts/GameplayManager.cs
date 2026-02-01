@@ -12,10 +12,12 @@ public class GameplayManager : MonoBehaviour
     public GameObject Player;
 
     [SerializeField]
-    public Vector2 MajorSpawnPoint;
+    public GameObject Water;
+    [SerializeField]
+    public Vector2 WaterRespawnOffset;
 
     [SerializeField]
-    public Vector2 MinorSpawnPoint;
+    public Vector2 MajorSpawnPoint;
 
     public void Awake()
     {
@@ -30,8 +32,6 @@ public class GameplayManager : MonoBehaviour
     {
         var hasDied = Damage();
         if (hasDied) return;
-
-        SoftSpawn();
     }
 
     // TODO: Invincibility time
@@ -56,17 +56,20 @@ public class GameplayManager : MonoBehaviour
         Spawn();
     }
 
-    public void SoftSpawn()
-    {
-        Player.transform.SetPositionAndRotation(MinorSpawnPoint, Player.transform.rotation);
-    }
-
     public void Spawn()
     {
         currentHealth = MaxHealth;
         Player.transform.SetPositionAndRotation(MajorSpawnPoint, Player.transform.rotation);
+        if (Water != null) setWaterLevel();
     }
 
-    public void UpdateMajorSpawnPoint(Vector2 position) { MajorSpawnPoint = position; }
-    public void UpdateMinorSpawnPoint(Vector2 position) { MinorSpawnPoint = position; }
+    public void UpdateMajorSpawnPoint(Vector2 position)
+    {
+        MajorSpawnPoint = position;
+    }
+
+    private void setWaterLevel()
+    {
+        Water.transform.SetPositionAndRotation(MajorSpawnPoint + WaterRespawnOffset, Water.transform.rotation);
+    }
 }
