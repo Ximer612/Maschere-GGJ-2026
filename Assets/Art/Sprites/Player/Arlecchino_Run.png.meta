@@ -1,0 +1,444 @@
+fileFormatVersion: 2
+guid: 5b294eb1aef09db4ea69c0e16df39039
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4807218823201963432
+    second: Arlecchino_Run_0
+  - first:
+      213: -5333046316296496181
+    second: Arlecchino_Run_1
+  - first:
+      213: 7484801586537371299
+    second: Arlecchino_Run_2
+  - first:
+      213: -8827800112503926366
+    second: Arlecchino_Run_3
+  - first:
+      213: -1260259422687334224
+    second: Arlecchino_Run_4
+  - first:
+      213: -6875874348918556418
+    second: Arlecchino_Run_5
+  - first:
+      213: -5621284027486027215
+    second: Arlecchino_Run_6
+  - first:
+      213: 4347664146519782377
+    second: Arlecchino_Run_7
+  - first:
+      213: 1096818038652112117
+    second: Arlecchino_Run_8
+  - first:
+      213: 3857313710202450620
+    second: Arlecchino_Run_9
+  - first:
+      213: 5507811319231847582
+    second: Arlecchino_Run_10
+  - first:
+      213: -6199684018835689646
+    second: Arlecchino_Run_11
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Arlecchino_Run_0
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 41
+        width: 201
+        height: 274
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ad368acc0ca6b240800000000000000
+      internalID: 4807218823201963432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arlecchino_Run_1
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 46
+        width: 199
+        height: 269
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bcb117a81a63df5b0800000000000000
+      internalID: -5333046316296496181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arlecchino_Run_2
+      rect:
+        serializedVersion: 2
+        x: 894
+        y: 46
+        width: 197
+        height: 273
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a617d3036b5fd760800000000000000
+      internalID: 7484801586537371299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arlecchino_Run_3
+      rect:
+        serializedVersion: 2
+        x: 1295
+        y: 60
+        width: 197
+        height: 259
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a1dc02c19a5d7580800000000000000
+      internalID: -8827800112503926366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arlecchino_Run_4
+      rect:
+        serializedVersion: 2
+        x: 1696
+        y: 64
+        width: 197
+        height: 258
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b0f1e17bb8a28ee0800000000000000
+      internalID: -1260259422687334224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arlecchino_Run_5
+      rect:
+        serializedVersion: 2
+        x: 2092
+        y: 67
+        width: 201
+        height: 252
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef83d78a5bcf390a0800000000000000
+      internalID: -6875874348918556418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arlecchino_Run_6
+      rect:
+        serializedVersion: 2
+        x: 2495
+        y: 92
+        width: 197
+        height: 227
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1324e18b5ff2df1b0800000000000000
+      internalID: -5621284027486027215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arlecchino_Run_7
+      rect:
+        serializedVersion: 2
+        x: 2893
+        y: 60
+        width: 200
+        height: 259
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e37300a181065c30800000000000000
+      internalID: 4347664146519782377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arlecchino_Run_8
+      rect:
+        serializedVersion: 2
+        x: 3294
+        y: 60
+        width: 197
+        height: 259
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5fc8919e13ea83f00800000000000000
+      internalID: 1096818038652112117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arlecchino_Run_9
+      rect:
+        serializedVersion: 2
+        x: 3695
+        y: 60
+        width: 196
+        height: 257
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb27cdbe16ee78530800000000000000
+      internalID: 3857313710202450620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arlecchino_Run_10
+      rect:
+        serializedVersion: 2
+        x: 4096
+        y: 41
+        width: 194
+        height: 274
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9c90b4963daf6c40800000000000000
+      internalID: 5507811319231847582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arlecchino_Run_11
+      rect:
+        serializedVersion: 2
+        x: 4489
+        y: 41
+        width: 200
+        height: 274
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25fe1a17b3c46f9a0800000000000000
+      internalID: -6199684018835689646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: b65e8ed7914b6b54d95c3a94fce9320a
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.0},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":7,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      Arlecchino_Run_0: 4807218823201963432
+      Arlecchino_Run_1: -5333046316296496181
+      Arlecchino_Run_10: 5507811319231847582
+      Arlecchino_Run_11: -6199684018835689646
+      Arlecchino_Run_2: 7484801586537371299
+      Arlecchino_Run_3: -8827800112503926366
+      Arlecchino_Run_4: -1260259422687334224
+      Arlecchino_Run_5: -6875874348918556418
+      Arlecchino_Run_6: -5621284027486027215
+      Arlecchino_Run_7: 4347664146519782377
+      Arlecchino_Run_8: 1096818038652112117
+      Arlecchino_Run_9: 3857313710202450620
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

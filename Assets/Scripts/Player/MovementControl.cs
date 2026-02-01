@@ -101,6 +101,7 @@ public class MovementControl : MonoBehaviour
                     transform.position = edgeGrabbing.standPoint;
                     isEdgeClimbing = false;
                     shouldEdgeGrab = false;
+                    Localanimator.SetBool("bIsGrabbing", isEdgeClimbing);
                     rb2d.linearVelocity = Vector2.zero;
                     rb2d.gravityScale = 0f;
                     edgeGrabTimer.Reset();
@@ -253,6 +254,7 @@ public class MovementControl : MonoBehaviour
             {
                 beforeEdgeClimbPosition = transform.position;
                 isEdgeClimbing = true;
+                Localanimator.SetBool("bIsGrabbing", isEdgeClimbing);
                 //StartCoroutine(TeleportToEdge());
             }
             else if (!isEdgeClimbing)
