@@ -7,7 +7,7 @@ public class InteractionController : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D collider)
     {
-        var maybeInteractable = collider.transform.root.GetComponent<IInteractable>();
+        var maybeInteractable = collider.transform.root.GetComponentInChildren<IInteractable>();
         if (maybeInteractable != null)
         {
             currentInteractable = maybeInteractable;
@@ -16,7 +16,7 @@ public class InteractionController : MonoBehaviour
 
     public void OnTriggerExit2D(Collider2D collider)
     {
-        var maybeInteractable = collider.transform.root.GetComponent<IInteractable>();
+        var maybeInteractable = collider.transform.root.GetComponentInChildren<IInteractable>();
         if (maybeInteractable == currentInteractable)
         {
             currentInteractable = null;
