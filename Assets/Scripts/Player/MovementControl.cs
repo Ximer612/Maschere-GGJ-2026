@@ -54,6 +54,12 @@ public class MovementControl : MonoBehaviour
     [SerializeField] float stillPressingGravityScaler = 0.5f;
     [SerializeField] bool shouldEdgeGrab = false, isEdgeClimbing = false;
     [SerializeField] float lastEdgeGrabTime = -1, edgeGrabAgainTime = 1f;
+    [SerializeField] float walkSoundDistance;
+    [SerializeField] Vector2 lastStepSound;
+
+    [SerializeField] AudioSource source;
+    [SerializeField] AudioClip dashClip, jumpClip, grabClip, landClip, walkClip1,walkClip2;
+    bool walkOneOrTwo;
 
     void Start()
     {
@@ -67,6 +73,15 @@ public class MovementControl : MonoBehaviour
         //stepOnTimer = new Timer(0.02f, true);
 
         defaultCameraYOffset = cameraPositionComposer.TargetOffset.y;
+
+        boxGroundController.OnNewLand += LandSound;
+
+        lastStepSound = transform.position;
+    }
+
+    void LandSound()
+    {
+        PlayAudioWithRandomPitch(landClip, volume: 0.25f);
     }
 
     void Update()
@@ -121,6 +136,7 @@ public class MovementControl : MonoBehaviour
                 shouldEdgeGrab = true;
                 rb2d.linearVelocity = Vector2.zero;
                 rb2d.gravityScale = 0f;
+                PlayAudioWithRandomPitch(grabClip,volume:0.25f);
                 //StartCoroutine(TeleportToEdge());
                 return;
             }
@@ -152,6 +168,20 @@ public class MovementControl : MonoBehaviour
         //{
         //    StepOn();
         //}
+
+        if(IsGrounded && Vector2.Distance(lastStepSound,transform.position) > walkSoundDistance)
+        {
+            walkOneOrTwo = !walkOneOrTwo;
+            PlayAudioWithRandomPitch(walkOneOrTwo ? walkClip1 : walkClip2);
+            lastStepSound = transform.position;
+        }
+    }
+
+    void PlayAudioWithRandomPitch(AudioClip clip, float minRange = 0.8f, float maxRange = 1.1f, float volume = 0.5f)
+    {
+        source.pitch = UnityEngine.Random.Range(minRange, maxRange);
+        source.volume = volume;
+        source.PlayOneShot(clip);
     }
 
     private void FixedUpdate()
@@ -183,9 +213,8 @@ public class MovementControl : MonoBehaviour
         }
 
         Jump();
-
-
     }
+
     void ProcessHMovement()
     {
         if (Mathf.Abs(lJoyHReadValue) > 0.01)
@@ -291,6 +320,8 @@ public class MovementControl : MonoBehaviour
             rb2d.AddForce(Vector2.up * JumpForce, ForceMode2D.Impulse);
             jumpBufferCounter = 0f;
 
+            PlayAudioWithRandomPitch(jumpClip,0.25f,0.5f,0.15f);
+
         }
     }
     public void JumpAction(InputAction.CallbackContext ctx)
@@ -315,6 +346,7 @@ public class MovementControl : MonoBehaviour
             return;
 
         StartCoroutine(ContinueDashing());
+        PlayAudioWithRandomPitch(dashClip, 0.6f, 0.9f, 0.5f);
     }
 
     private IEnumerator ContinueDashing()

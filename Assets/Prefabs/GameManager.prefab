@@ -1631,6 +1631,10 @@ PrefabInstance:
       value: InteractionController, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 8934636235294886599, guid: 6f93f56106c48d247ba3675385a74f34, type: 3}
+      propertyPath: MovementSpeed
+      value: 7.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8934636235294886599, guid: 6f93f56106c48d247ba3675385a74f34, type: 3}
       propertyPath: cameraPositionComposer
       value: 
       objectReference: {fileID: 5755265458160113619}
