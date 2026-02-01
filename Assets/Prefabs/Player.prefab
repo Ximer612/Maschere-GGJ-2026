@@ -75,6 +75,7 @@ MonoBehaviour:
   boxGroundController: {fileID: 3882574875710948376}
   trailRenderer: {fileID: 5317763316018853302}
   edgeGrabbing: {fileID: 150037640937541560}
+  durationEdgeClimbing: 0.25
   stillPressingJump: 0
   stillPressingGravityScaler: 0.5
   shouldEdgeGrab: 0
@@ -183,7 +184,19 @@ MonoBehaviour:
     m_ActionId: 53e2ffe4-6a3f-4854-9a43-e0279b907d9e
     m_ActionName: 'PlayerActionMapping/Interact[/Keyboard/e]'
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
+        m_MethodName: OnEscMenu
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 97db3359-c4ab-43d4-80e2-0cedaec21f2f
     m_ActionName: 'PlayerActionMapping/EscMenu[/Keyboard/escape]'
   - m_PersistentCalls:
