@@ -418,7 +418,7 @@ MonoBehaviour:
   castDistance: 0.5
   mask:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 72
 --- !u!1 &3095931190475877719
 GameObject:
   m_ObjectHideFlags: 0

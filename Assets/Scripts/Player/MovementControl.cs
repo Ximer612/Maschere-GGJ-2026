@@ -60,7 +60,7 @@ public class MovementControl : MonoBehaviour
     [SerializeField] Vector2 lastStepSound;
 
     [SerializeField] AudioSource source;
-    [SerializeField] AudioClip dashClip, jumpClip, grabClip, landClip, walkClip1,walkClip2;
+    [SerializeField] AudioClip dashClip, jumpClip, grabClip, landClip, walkClip1, walkClip2;
     bool walkOneOrTwo;
 
     void Start()
@@ -73,7 +73,7 @@ public class MovementControl : MonoBehaviour
         defaultPlayerGravity = rb2d.gravityScale;
         coyoteTimer = 0.2f;
         trailRenderer.time = dashTime;
-        edgeGrabTimer = new Timer(durationEdgeClimbing, false,true);
+        edgeGrabTimer = new Timer(durationEdgeClimbing, false, true);
         //stepOnTimer = new Timer(0.02f, true);
 
         defaultCameraYOffset = cameraPositionComposer.TargetOffset.y;
@@ -93,9 +93,9 @@ public class MovementControl : MonoBehaviour
     {
         if (shouldEdgeGrab)
         {
-            if(isEdgeClimbing)
+            if (isEdgeClimbing)
             {
-                if(edgeGrabTimer.Tick(Time.deltaTime))
+                if (edgeGrabTimer.Tick(Time.deltaTime))
                 {
                     //rb2d.linearVelocity = Vector2.zero;
                     //rb2d.gravityScale = 0f;
@@ -121,8 +121,8 @@ public class MovementControl : MonoBehaviour
                 float lerpValue = edgeGrabTimer.GetCounter() / edgeGrabTimer.GetTimer();
 
                 transform.position = Vector3.Lerp(toLerpPos, beforeEdgeClimbPosition, lerpValue);
-            }   
-            
+            }
+
             return;
         }
 
@@ -142,7 +142,7 @@ public class MovementControl : MonoBehaviour
                 shouldEdgeGrab = true;
                 rb2d.linearVelocity = Vector2.zero;
                 rb2d.gravityScale = 0f;
-                PlayAudioWithRandomPitch(grabClip,volume:0.25f);
+                PlayAudioWithRandomPitch(grabClip, volume: 0.25f);
                 //StartCoroutine(TeleportToEdge());
                 return;
             }
@@ -175,7 +175,7 @@ public class MovementControl : MonoBehaviour
         //    StepOn();
         //}
 
-        if(IsGrounded && Vector2.Distance(lastStepSound,transform.position) > walkSoundDistance)
+        if (IsGrounded && Vector2.Distance(lastStepSound, transform.position) > walkSoundDistance)
         {
             walkOneOrTwo = !walkOneOrTwo;
             PlayAudioWithRandomPitch(walkOneOrTwo ? walkClip1 : walkClip2);
@@ -299,9 +299,9 @@ public class MovementControl : MonoBehaviour
 
         if (ctx.performed)
         {
-            cameraPositionComposer.TargetOffset.y = lJoyVReadValue > 0 ? defaultCameraYOffset * 1.5f : -defaultCameraYOffset;
+            cameraPositionComposer.TargetOffset.y = lJoyVReadValue > 0 ? defaultCameraYOffset * 7.5f : -defaultCameraYOffset * 5f;
         }
-        else if(ctx.canceled)
+        else if (ctx.canceled)
         {
             cameraPositionComposer.TargetOffset.y = defaultCameraYOffset;
         }
@@ -333,7 +333,7 @@ public class MovementControl : MonoBehaviour
             rb2d.AddForce(Vector2.up * JumpForce, ForceMode2D.Impulse);
             jumpBufferCounter = 0f;
 
-            PlayAudioWithRandomPitch(jumpClip,0.25f,0.5f,0.15f);
+            PlayAudioWithRandomPitch(jumpClip, 0.25f, 0.5f, 0.15f);
 
         }
     }
