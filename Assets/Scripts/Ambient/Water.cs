@@ -4,7 +4,7 @@ public class Water : MonoBehaviour
 {
     [SerializeField] float Speed = 0.2f;
     [SerializeField] Vector2 Direction = new Vector2(0, 1);
-    [SerializeField] bool IsActive = false;
+    [SerializeField] public bool IsActive = false;
 
     void Update()
     {
@@ -23,5 +23,10 @@ public class Water : MonoBehaviour
     public void Activate()
     {
         IsActive = true;
+    }
+
+    public void Deactivate()
+    {
+        IsActive = false;
     }
 }

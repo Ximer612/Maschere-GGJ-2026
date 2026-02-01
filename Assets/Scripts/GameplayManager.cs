@@ -60,12 +60,24 @@ public class GameplayManager : MonoBehaviour
     {
         currentHealth = MaxHealth;
         Player.transform.SetPositionAndRotation(MajorSpawnPoint, Player.transform.rotation);
-        if (Water != null) setWaterLevel();
+        if (Water != null && Water.GetComponentInChildren<Water>().IsActive) setWaterLevel();
     }
 
     public void UpdateMajorSpawnPoint(Vector2 position)
     {
         MajorSpawnPoint = position;
+    }
+
+    public void StartWaterSection()
+    {
+        var water = Water.GetComponentInChildren<Water>();
+        water.Activate();
+    }
+
+    public void StopWaterSection()
+    {
+        var water = Water.GetComponentInChildren<Water>();
+        water.Deactivate();
     }
 
     private void setWaterLevel()

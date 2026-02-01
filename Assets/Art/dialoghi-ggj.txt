@@ -1,0 +1,31 @@
+Arlecchino (maschera rotta) (carattere poco energico, 'depresso'):
+"Ehi Sig. Restauratore... Ho un problema e non sapevo chi altro chiamare... l'altro giorno ho incontrato un demone mentre girovagavo: mi ha attaccato rabbioso in preda all'invidia... sono riuscito a fuggire ma la mia maschera si è rotta..."
+*consegna la maschera rotta al protagonista*
+"Ecco a lei... quel demone non dovrebbe dare problemi ad un senza-maschera come lei... può aiutarmi, vero?"
+"Dei pezzi di stoffa potrebbero funzionare... a Canale Venezia so che tengono il mercato e sono soliti buttare molta roba..."
+
+Interagendo di nuovo con lui prima di riparare la maschera
+#1
+"Fino all'altro giorno ero il solito me stesso... mentre adesso mi sento così... come se fossi qualcun'altro."
+"E' proprio come aveva detto Frappiglia... senza la propria maschera, non si è sé stessi..."
+
+#2
+"Conosce la mia storia...? La mia era una persona tutta persona vivace e reattiva, adesso mi sento sono così..."
+"Però credo che lei non potrà capirmi, vero Sig. Restauratore?"
+
+#3
+"La prego Sig. Restauratore mi aiuti... Può provare a vedere in Canale Venezia."
+
+
+
+Arlecchino (maschera riparata) (carattere originale (energico, responsivo)):
+"Grazie Sig. Restauratore, mi sento di nuovo come il vero me stesso! Spero non abbia incontrato quello sporco demone!"
+"Comunque penso che potrebbe aiutare anche gli altri miei vicini, quel maledetto ha colpito tutti noi! Così ho sentito."
+
+Interaggendo di nuovo con lui dopo aver riparato la maschera
+#1
+"Frappiglia aveva proprio ragione... Ah sì, non le ho detto come l'ho conosciuto; sa, lui è un contadino e tra poveri ci s'intende, tralasciando un paio di piccole 'lavoretti' fatti insieme ma questi sono dettagli. Non avrei mai immaginato che zappare la terra potesse rendere una persona così saggia!"
+
+#2
+"Si, riguardo il mio carattere, immagino che adesso potrà aver capito cosa intedenvo, no? Non ha fatto altro che aiutarmi in questi anni di truff... di lavoretti!"
+"Aiuta molto anche capire come entrare nelle grazie di una persona, sa, quale 'sfumatura' prendere per guadagnare la sua fiducia... immagino che neanche questo lei potrà capirlo Sig. Restauratore."
