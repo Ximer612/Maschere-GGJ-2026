@@ -79,9 +79,12 @@ public class SubtitlesManager : MonoBehaviour
             enabled = false;
         }
 
-        skipToEnd = true;
-        ToSkipText.SetActive(false);
-        KeyToPress.SetActive(false);
+        if(enabled && context.performed)
+        {
+            skipToEnd = true;
+            ToSkipText.SetActive(false);
+            KeyToPress.SetActive(false);
+        }
     }
 
     private void Update()
@@ -93,7 +96,7 @@ public class SubtitlesManager : MonoBehaviour
         {
             CloseDialogBox();
         }
-        else if (skipToEnd || subtitlesTimer.Tick(Time.deltaTime))
+        else if (/*skipToEnd ||*/ subtitlesTimer.Tick(Time.deltaTime))
         {
             if (textToShow.Length <= currentCharIndex)
             {
@@ -107,8 +110,10 @@ public class SubtitlesManager : MonoBehaviour
 
             char newChar = textToShow[currentCharIndex];
 
-            if (newChar != ' ' && charAudio)
+            if (newChar != ' ' && charAudio /*&& currentCharIndex % 4 == 0*/)
             {
+                //AudioClip clip = charAudio;
+                audioSource.pitch = Random.Range(0.8f, 1.2f);
                 audioSource.PlayOneShot(charAudio);
             }
             //AudioManager.Singleton.PlayOneShot(charAudio, Vector2.zero);

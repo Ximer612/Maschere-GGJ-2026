@@ -301,7 +301,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SubtitleTriggerer
   speakerAvatar: {fileID: 289321147, guid: a67ea05dc671b464bacf71e1c818799f, type: 3}
   dialogueToPlay: gedgg dgsd gsd gsd gs
-  charAudio: {fileID: 8300000, guid: 975743619489c974bbd6fb64cf064e04, type: 3}
+  charAudio: {fileID: 8300000, guid: 6d3ab42a3339ef6499d299136597c1ba, type: 3}
   keyboardKeys: 
   hasPlayedOnce: 0
   CloseCallback:
@@ -1931,6 +1931,14 @@ PrefabInstance:
     - target: {fileID: 4338874570273494127, guid: 6af175fc2e3cfd9409afbcbc56b217d5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4817450650414863899, guid: 6af175fc2e3cfd9409afbcbc56b217d5, type: 3}
+      propertyPath: charPerSecond
+      value: 0.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 7293843118741591661, guid: 6af175fc2e3cfd9409afbcbc56b217d5, type: 3}
+      propertyPath: m_Volume
+      value: 0.75
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
