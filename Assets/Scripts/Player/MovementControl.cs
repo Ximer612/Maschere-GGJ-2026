@@ -65,6 +65,8 @@ public class MovementControl : MonoBehaviour
 
     void Start()
     {
+        Singleton = this;
+
         DefaultMovementSpeed = MovementSpeed;
 
         rb2d = GetComponent<Rigidbody2D>();
