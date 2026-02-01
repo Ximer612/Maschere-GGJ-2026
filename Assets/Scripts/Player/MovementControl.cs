@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using static UnityEngine.RuleTile.TilingRuleOutput;
 
 public class MovementControl : MonoBehaviour
 {
@@ -38,6 +39,9 @@ public class MovementControl : MonoBehaviour
     [SerializeField] BoxGroundController boxGroundController;
     [SerializeField] TrailRenderer trailRenderer;
     [SerializeField] EdgeGrabbing edgeGrabbing;
+    [SerializeField] float durationEdgeClimbing = 0.25f;
+    Vector3 beforeEdgeClimbPosition;
+    Timer edgeGrabTimer;
 
     private float defaultPlayerGravity;
 
@@ -56,13 +60,45 @@ public class MovementControl : MonoBehaviour
         defaultPlayerGravity = rb2d.gravityScale;
         coyoteTimer = 0.2f;
         trailRenderer.time = dashTime;
+        edgeGrabTimer = new Timer(durationEdgeClimbing, false,true);
         //stepOnTimer = new Timer(0.02f, true);
     }
 
     void Update()
     {
         if (shouldEdgeGrab)
+        {
+            if(isEdgeClimbing)
+            {
+                if(edgeGrabTimer.Tick(Time.deltaTime))
+                {
+                    //rb2d.linearVelocity = Vector2.zero;
+                    //rb2d.gravityScale = 0f;
+                    //isEdgeClimbing = true;
+                    //yield return new WaitForSeconds(0.25f);
+                    transform.position = edgeGrabbing.standPoint;
+                    isEdgeClimbing = false;
+                    shouldEdgeGrab = false;
+                    rb2d.linearVelocity = Vector2.zero;
+                    rb2d.gravityScale = 0f;
+                    edgeGrabTimer.Reset();
+                    return;
+                }
+
+                Vector2 toLerpPos;
+
+                if (edgeGrabTimer.GetCounter() > edgeGrabTimer.GetTimer() * 0.5f)
+                    toLerpPos = new Vector2(transform.position.x, edgeGrabbing.standPoint.y);
+                else
+                    toLerpPos = edgeGrabbing.standPoint;
+
+                float lerpValue = edgeGrabTimer.GetCounter() / edgeGrabTimer.GetTimer();
+
+                transform.position = Vector3.Lerp(toLerpPos, beforeEdgeClimbPosition, lerpValue);
+            }   
+            
             return;
+        }
 
         isGrounded = boxGroundController.IsGrounded;
 
@@ -179,7 +215,9 @@ public class MovementControl : MonoBehaviour
 
             if (dir && lJoyHReadValue > 0 || !dir && lJoyHReadValue < 0)
             {
-                StartCoroutine(TeleportToEdge());
+                beforeEdgeClimbPosition = transform.position;
+                isEdgeClimbing = true;
+                //StartCoroutine(TeleportToEdge());
             }
             else if (!isEdgeClimbing)
             {
