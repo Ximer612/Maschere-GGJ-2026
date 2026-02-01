@@ -13,7 +13,5 @@ public class SpawnPoint : MonoBehaviour
 
         NextPoint.IsActive = true;
         IsActive = false;
-
-        // GameplayManager.Singleton.SetWaterLevel(Vec2);
     }
 }
