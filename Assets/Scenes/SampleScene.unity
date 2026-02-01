@@ -1932,14 +1932,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5755265458160113619, guid: 6af175fc2e3cfd9409afbcbc56b217d5, type: 3}
-      propertyPath: Damping.y
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 5755265458160113619, guid: 6af175fc2e3cfd9409afbcbc56b217d5, type: 3}
-      propertyPath: Composition.DeadZone.Size.y
-      value: 0.1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
