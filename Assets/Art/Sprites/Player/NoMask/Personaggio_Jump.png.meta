@@ -1,0 +1,442 @@
+fileFormatVersion: 2
+guid: 000e2e82ec895ad4aad1ca0dc3f1628b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3536130850185513158
+    second: Personaggio_Jump_0
+  - first:
+      213: 1733160362493340062
+    second: Personaggio_Jump_1
+  - first:
+      213: -6554508475751783343
+    second: Personaggio_Jump_2
+  - first:
+      213: 4988753750256286488
+    second: Personaggio_Jump_3
+  - first:
+      213: 8513583087351604153
+    second: Personaggio_Jump_4
+  - first:
+      213: 3219877282063285533
+    second: Personaggio_Jump_5
+  - first:
+      213: 693040779875640512
+    second: Personaggio_Jump_6
+  - first:
+      213: -2919784551738784387
+    second: Personaggio_Jump_7
+  - first:
+      213: -1728949036417630717
+    second: Personaggio_Jump_8
+  - first:
+      213: -9088698601899431150
+    second: Personaggio_Jump_9
+  - first:
+      213: -5110645898618355618
+    second: Personaggio_Jump_10
+  - first:
+      213: -8235316975610914072
+    second: Personaggio_Jump_11
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Personaggio_Jump_0
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 97
+        width: 216
+        height: 241
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c88b94e54cd21130800000000000000
+      internalID: 3536130850185513158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Personaggio_Jump_1
+      rect:
+        serializedVersion: 2
+        x: 526
+        y: 84
+        width: 216
+        height: 247
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e99e331ca2c6d0810800000000000000
+      internalID: 1733160362493340062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Personaggio_Jump_2
+      rect:
+        serializedVersion: 2
+        x: 921
+        y: 49
+        width: 218
+        height: 248
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1542781c445b905a0800000000000000
+      internalID: -6554508475751783343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Personaggio_Jump_3
+      rect:
+        serializedVersion: 2
+        x: 1298
+        y: 29
+        width: 229
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81b7ce3ba1d9b3540800000000000000
+      internalID: 4988753750256286488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Personaggio_Jump_4
+      rect:
+        serializedVersion: 2
+        x: 1714
+        y: 27
+        width: 205
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b3ad5706b2562670800000000000000
+      internalID: 8513583087351604153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Personaggio_Jump_5
+      rect:
+        serializedVersion: 2
+        x: 2114
+        y: 27
+        width: 205
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1d7bb1145d4fac20800000000000000
+      internalID: 3219877282063285533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Personaggio_Jump_6
+      rect:
+        serializedVersion: 2
+        x: 2520
+        y: 34
+        width: 169
+        height: 212
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c4e85bdaec2e9900800000000000000
+      internalID: 693040779875640512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Personaggio_Jump_7
+      rect:
+        serializedVersion: 2
+        x: 2911
+        y: 29
+        width: 197
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d75cfec7b67da77d0800000000000000
+      internalID: -2919784551738784387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Personaggio_Jump_8
+      rect:
+        serializedVersion: 2
+        x: 3317
+        y: 54
+        width: 188
+        height: 266
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30eb291030a8108e0800000000000000
+      internalID: -1728949036417630717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Personaggio_Jump_9
+      rect:
+        serializedVersion: 2
+        x: 3719
+        y: 74
+        width: 191
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21be13b86c47ed180800000000000000
+      internalID: -9088698601899431150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Personaggio_Jump_10
+      rect:
+        serializedVersion: 2
+        x: 4133
+        y: 69
+        width: 171
+        height: 274
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e50cb00f1a65319b0800000000000000
+      internalID: -5110645898618355618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Personaggio_Jump_11
+      rect:
+        serializedVersion: 2
+        x: 4525
+        y: 104
+        width: 213
+        height: 237
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ea97ffd7d646bd80800000000000000
+      internalID: -8235316975610914072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Personaggio_Jump_0: 3536130850185513158
+      Personaggio_Jump_1: 1733160362493340062
+      Personaggio_Jump_10: -5110645898618355618
+      Personaggio_Jump_11: -8235316975610914072
+      Personaggio_Jump_2: -6554508475751783343
+      Personaggio_Jump_3: 4988753750256286488
+      Personaggio_Jump_4: 8513583087351604153
+      Personaggio_Jump_5: 3219877282063285533
+      Personaggio_Jump_6: 693040779875640512
+      Personaggio_Jump_7: -2919784551738784387
+      Personaggio_Jump_8: -1728949036417630717
+      Personaggio_Jump_9: -9088698601899431150
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

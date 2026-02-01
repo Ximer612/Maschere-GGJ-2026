@@ -1,0 +1,442 @@
+fileFormatVersion: 2
+guid: d4e64a79124650e429b449620de7642a
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 813821656218611851
+    second: Personaggio_Edge_0
+  - first:
+      213: 5649718001454784736
+    second: Personaggio_Edge_1
+  - first:
+      213: 3755354721680500160
+    second: Personaggio_Edge_2
+  - first:
+      213: 7533044486105331662
+    second: Personaggio_Edge_3
+  - first:
+      213: 2680926971304013
+    second: Personaggio_Edge_4
+  - first:
+      213: -6649624543755332636
+    second: Personaggio_Edge_5
+  - first:
+      213: 3194657698958726806
+    second: Personaggio_Edge_6
+  - first:
+      213: -1828269798149712982
+    second: Personaggio_Edge_7
+  - first:
+      213: 2809901109302246240
+    second: Personaggio_Edge_8
+  - first:
+      213: -7988993700225500911
+    second: Personaggio_Edge_9
+  - first:
+      213: 5700867483455105215
+    second: Personaggio_Edge_10
+  - first:
+      213: -130647700464527797
+    second: Personaggio_Edge_11
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Personaggio_Edge_0
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 86
+        width: 136
+        height: 251
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b803e690c764b4b00800000000000000
+      internalID: 813821656218611851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Personaggio_Edge_1
+      rect:
+        serializedVersion: 2
+        x: 488
+        y: 87
+        width: 137
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e0a7ddb694d76e40800000000000000
+      internalID: 5649718001454784736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Personaggio_Edge_2
+      rect:
+        serializedVersion: 2
+        x: 887
+        y: 88
+        width: 138
+        height: 249
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c52a5ff833bd1430800000000000000
+      internalID: 3755354721680500160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Personaggio_Edge_3
+      rect:
+        serializedVersion: 2
+        x: 1287
+        y: 88
+        width: 138
+        height: 249
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec7f58f5c00ca8860800000000000000
+      internalID: 7533044486105331662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Personaggio_Edge_4
+      rect:
+        serializedVersion: 2
+        x: 1687
+        y: 90
+        width: 138
+        height: 247
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d481bc3f946890000800000000000000
+      internalID: 2680926971304013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Personaggio_Edge_5
+      rect:
+        serializedVersion: 2
+        x: 2088
+        y: 87
+        width: 137
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e39ebb65b9c7b3a0800000000000000
+      internalID: -6649624543755332636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Personaggio_Edge_6
+      rect:
+        serializedVersion: 2
+        x: 2488
+        y: 86
+        width: 137
+        height: 251
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 696d66d4044b55c20800000000000000
+      internalID: 3194657698958726806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Personaggio_Edge_7
+      rect:
+        serializedVersion: 2
+        x: 2889
+        y: 87
+        width: 132
+        height: 249
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa316bf1e4ea0a6e0800000000000000
+      internalID: -1828269798149712982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Personaggio_Edge_8
+      rect:
+        serializedVersion: 2
+        x: 3298
+        y: 83
+        width: 129
+        height: 251
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06bbfe1eb26cef620800000000000000
+      internalID: 2809901109302246240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Personaggio_Edge_9
+      rect:
+        serializedVersion: 2
+        x: 3705
+        y: 85
+        width: 128
+        height: 247
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 119b931ae84612190800000000000000
+      internalID: -7988993700225500911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Personaggio_Edge_10
+      rect:
+        serializedVersion: 2
+        x: 4105
+        y: 85
+        width: 128
+        height: 247
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb8aaee85cc8d1f40800000000000000
+      internalID: 5700867483455105215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Personaggio_Edge_11
+      rect:
+        serializedVersion: 2
+        x: 4497
+        y: 86
+        width: 130
+        height: 249
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b46171fcb98df2ef0800000000000000
+      internalID: -130647700464527797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Personaggio_Edge_0: 813821656218611851
+      Personaggio_Edge_1: 5649718001454784736
+      Personaggio_Edge_10: 5700867483455105215
+      Personaggio_Edge_11: -130647700464527797
+      Personaggio_Edge_2: 3755354721680500160
+      Personaggio_Edge_3: 7533044486105331662
+      Personaggio_Edge_4: 2680926971304013
+      Personaggio_Edge_5: -6649624543755332636
+      Personaggio_Edge_6: 3194657698958726806
+      Personaggio_Edge_7: -1828269798149712982
+      Personaggio_Edge_8: 2809901109302246240
+      Personaggio_Edge_9: -7988993700225500911
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
