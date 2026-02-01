@@ -2466,6 +2466,10 @@ PrefabInstance:
       propertyPath: OnInteract.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: SubtitleTriggerer, Assembly-CSharp
       objectReference: {fileID: 0}
+    - target: {fileID: 1222695736090402430, guid: 7c59c74265091b4c3bae0f4c4bec4ee8, type: 3}
+      propertyPath: m_SortingOrder
+      value: 23
+      objectReference: {fileID: 0}
     - target: {fileID: 3404218295222954976, guid: 7c59c74265091b4c3bae0f4c4bec4ee8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.27344
