@@ -41,12 +41,22 @@ public class Inventory : MonoBehaviour
         }
     }
 
-    public void SetArlecchinoBroken() { SetMaskStatus(MaskEnum.Arlecchino, MaskStatusEnum.BROKEN); }
+    public void SetArlecchinoBroken() { SetMaskStatus(MaskEnum.Arlecchino, MaskStatusEnum.BROKEN); MovementControl.Singleton.maxJumps = 2; }
 
     public void SetMaskStatus(MaskEnum mask, MaskStatusEnum status)
     {
         masks[mask] = status;
         Debug.Log($"Set {mask} to {status}");
+
+        if(status == MaskStatusEnum.FULL)
+        {
+            switch(mask)
+            {
+                case MaskEnum.Arlecchino:
+                    MovementControl.Singleton.canDash = true;
+                    break;
+            }
+        }
     }
 }
 

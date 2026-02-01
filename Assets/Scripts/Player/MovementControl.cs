@@ -3,10 +3,11 @@ using System.Collections;
 using Unity.Cinemachine;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using static UnityEngine.RuleTile.TilingRuleOutput;
 
 public class MovementControl : MonoBehaviour
 {
+    public static MovementControl Singleton;
+
     [SerializeField] PlayerInput pInput;
     public float DefaultMovementSpeed { get; private set; }
     public float MovementSpeed;
@@ -32,10 +33,10 @@ public class MovementControl : MonoBehaviour
     [SerializeField] private float lJoyHReadValue, lJoyVReadValue;
 
     public bool IsGrounded => isGrounded;
-    [SerializeField] bool isGrounded, canDash;
+    public bool isGrounded, canDash;
     private bool isDashing;
     public bool IsDashing { get => isDashing; }
-    [SerializeField] int jumpCounter = 0, maxJumps = 1;
+    public int jumpCounter = 0, maxJumps = 1;
     [SerializeField] float coyoteCounter, coyoteTimer;
     [SerializeField] BoxGroundController boxGroundController;
     [SerializeField] TrailRenderer trailRenderer;

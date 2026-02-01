@@ -68,9 +68,9 @@ MonoBehaviour:
   lJoyHReadValue: 0
   lJoyVReadValue: 0
   isGrounded: 0
-  canDash: 1
+  canDash: 0
   jumpCounter: 0
-  maxJumps: 2
+  maxJumps: 1
   coyoteCounter: 0
   coyoteTimer: 2
   boxGroundController: {fileID: 3882574875710948376}

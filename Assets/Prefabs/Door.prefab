@@ -212,6 +212,21 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3163949908375313007, guid: ac268223c3668074eb6e6de1b9e47024, type: 3}
+      propertyPath: charAudio
+      value: 
+      objectReference: {fileID: 8300000, guid: 6d3ab42a3339ef6499d299136597c1ba, type: 3}
+    - target: {fileID: 3163949908375313007, guid: ac268223c3668074eb6e6de1b9e47024, type: 3}
+      propertyPath: speakerAvatar
+      value: 
+      objectReference: {fileID: 5359040346390345493, guid: bff0753212f48ee40a29290cdee66ff4, type: 3}
+    - target: {fileID: 3163949908375313007, guid: ac268223c3668074eb6e6de1b9e47024, type: 3}
+      propertyPath: dialogueToPlay
+      value: "Ehi Sig. Restauratore... Ho un problema e non sapevo chi altro chiamare...
+        l'altro giorno ho incontrato un demone mentre girovagavo: mi ha attaccato
+        rabbioso in preda all'invidia... sono riuscito a fuggire ma la mia maschera
+        si \xE8 rotta..."
+      objectReference: {fileID: 0}
     - target: {fileID: 7206094739023616751, guid: ac268223c3668074eb6e6de1b9e47024, type: 3}
       propertyPath: m_Name
       value: DialoguesTrigger
