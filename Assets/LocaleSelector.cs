@@ -1,9 +1,12 @@
 using System.Collections;
 using  System.collections.Generic;
 using UnityEngine;
+
 using UnityEngine.Localization.Settings;
-public class LSelector : MonoBehaviour
- void Start()
+
+public class LocaleSelector: MonoBehaviour
+
+private void Start()
 {
     int ID = PlayerPrefs.GetInt("Localekey", 0);
     ChangeLocale(ID);
