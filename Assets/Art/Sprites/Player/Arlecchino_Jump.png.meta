@@ -1,0 +1,444 @@
+fileFormatVersion: 2
+guid: b7f10252a41b14d4f828919e4201a3b6
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4436529466239280391
+    second: Arlecchino_Jump_0
+  - first:
+      213: -8243074556291701662
+    second: Arlecchino_Jump_1
+  - first:
+      213: 5482569558830136734
+    second: Arlecchino_Jump_2
+  - first:
+      213: 3812485292084872370
+    second: Arlecchino_Jump_3
+  - first:
+      213: 1920682567351357517
+    second: Arlecchino_Jump_4
+  - first:
+      213: 3783979119907956773
+    second: Arlecchino_Jump_5
+  - first:
+      213: -1566219345902642548
+    second: Arlecchino_Jump_6
+  - first:
+      213: 3098009910009592407
+    second: Arlecchino_Jump_7
+  - first:
+      213: -6222153701139944193
+    second: Arlecchino_Jump_8
+  - first:
+      213: -2008448416023959135
+    second: Arlecchino_Jump_9
+  - first:
+      213: 3744853335189767211
+    second: Arlecchino_Jump_10
+  - first:
+      213: 7212272919258870350
+    second: Arlecchino_Jump_11
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Arlecchino_Jump_0
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 68
+        width: 190
+        height: 293
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 705eeb63b08b19d30800000000000000
+      internalID: 4436529466239280391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arlecchino_Jump_1
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 102
+        width: 215
+        height: 259
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2642c2f5d57ba9d80800000000000000
+      internalID: -8243074556291701662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arlecchino_Jump_2
+      rect:
+        serializedVersion: 2
+        x: 932
+        y: 95
+        width: 218
+        height: 264
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9db07247fff51c40800000000000000
+      internalID: 5482569558830136734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arlecchino_Jump_3
+      rect:
+        serializedVersion: 2
+        x: 1325
+        y: 83
+        width: 218
+        height: 274
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b4ce1a7c2ba8e430800000000000000
+      internalID: 3812485292084872370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arlecchino_Jump_4
+      rect:
+        serializedVersion: 2
+        x: 1719
+        y: 48
+        width: 220
+        height: 278
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4053496e92a7aa10800000000000000
+      internalID: 1920682567351357517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arlecchino_Jump_5
+      rect:
+        serializedVersion: 2
+        x: 2096
+        y: 27
+        width: 237
+        height: 252
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 528eb9f06f4638430800000000000000
+      internalID: 3783979119907956773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arlecchino_Jump_6
+      rect:
+        serializedVersion: 2
+        x: 2511
+        y: 27
+        width: 228
+        height: 229
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8ad0279dcba34ae0800000000000000
+      internalID: -1566219345902642548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arlecchino_Jump_7
+      rect:
+        serializedVersion: 2
+        x: 2912
+        y: 27
+        width: 225
+        height: 229
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75af2c469975efa20800000000000000
+      internalID: 3098009910009592407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arlecchino_Jump_8
+      rect:
+        serializedVersion: 2
+        x: 3318
+        y: 34
+        width: 203
+        height: 236
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ffceba9dc2876a9a0800000000000000
+      internalID: -6222153701139944193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arlecchino_Jump_9
+      rect:
+        serializedVersion: 2
+        x: 3709
+        y: 27
+        width: 227
+        height: 227
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a9223d8ece8024e0800000000000000
+      internalID: -2008448416023959135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arlecchino_Jump_10
+      rect:
+        serializedVersion: 2
+        x: 4114
+        y: 53
+        width: 216
+        height: 287
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b244ceb644468f330800000000000000
+      internalID: 3744853335189767211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arlecchino_Jump_11
+      rect:
+        serializedVersion: 2
+        x: 4518
+        y: 74
+        width: 208
+        height: 276
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e42389ff104271460800000000000000
+      internalID: 7212272919258870350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: e3f875b99ea823c4b8396ea6df6f44c7
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.0},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":7,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      Arlecchino_Jump_0: 4436529466239280391
+      Arlecchino_Jump_1: -8243074556291701662
+      Arlecchino_Jump_10: 3744853335189767211
+      Arlecchino_Jump_11: 7212272919258870350
+      Arlecchino_Jump_2: 5482569558830136734
+      Arlecchino_Jump_3: 3812485292084872370
+      Arlecchino_Jump_4: 1920682567351357517
+      Arlecchino_Jump_5: 3783979119907956773
+      Arlecchino_Jump_6: -1566219345902642548
+      Arlecchino_Jump_7: 3098009910009592407
+      Arlecchino_Jump_8: -6222153701139944193
+      Arlecchino_Jump_9: -2008448416023959135
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

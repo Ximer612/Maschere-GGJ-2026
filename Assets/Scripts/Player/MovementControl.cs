@@ -42,6 +42,7 @@ public class MovementControl : MonoBehaviour
     [SerializeField] EdgeGrabbing edgeGrabbing;
     [SerializeField] CinemachinePositionComposer cameraPositionComposer;
     float defaultCameraYOffset;
+    float defaultCameraXOffset;
     [SerializeField] float durationEdgeClimbing = 0.25f;
     Vector3 beforeEdgeClimbPosition;
     Timer edgeGrabTimer;
@@ -73,6 +74,7 @@ public class MovementControl : MonoBehaviour
         //stepOnTimer = new Timer(0.02f, true);
 
         defaultCameraYOffset = cameraPositionComposer.TargetOffset.y;
+        defaultCameraXOffset = cameraPositionComposer.TargetOffset.x;
 
         boxGroundController.OnNewLand += LandSound;
 
@@ -99,6 +101,7 @@ public class MovementControl : MonoBehaviour
                     transform.position = edgeGrabbing.standPoint;
                     isEdgeClimbing = false;
                     shouldEdgeGrab = false;
+                    Localanimator.SetBool("bIsGrabbing", isEdgeClimbing);
                     rb2d.linearVelocity = Vector2.zero;
                     rb2d.gravityScale = 0f;
                     edgeGrabTimer.Reset();
@@ -251,6 +254,7 @@ public class MovementControl : MonoBehaviour
             {
                 beforeEdgeClimbPosition = transform.position;
                 isEdgeClimbing = true;
+                Localanimator.SetBool("bIsGrabbing", isEdgeClimbing);
                 //StartCoroutine(TeleportToEdge());
             }
             else if (!isEdgeClimbing)
@@ -259,6 +263,12 @@ public class MovementControl : MonoBehaviour
             }
 
         }
+
+        if (ctx.performed)
+        {
+            cameraPositionComposer.TargetOffset.x = lJoyHReadValue > 0 ? defaultCameraXOffset : -defaultCameraXOffset;
+        }
+
     }
 
     //void ProcessVMovement()
