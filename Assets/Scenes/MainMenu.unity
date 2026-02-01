@@ -1225,7 +1225,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: TEST
+  m_text: "Teru M\xE0scara"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b97dfca6430ab954e9aaad200bc73341, type: 2}
   m_sharedMaterial: {fileID: 3613569092733586669, guid: b97dfca6430ab954e9aaad200bc73341, type: 2}
