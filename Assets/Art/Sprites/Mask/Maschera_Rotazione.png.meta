@@ -1,0 +1,754 @@
+fileFormatVersion: 2
+guid: 25d5603e421dc4943985db0b0a8ffc9a
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 9207556043158295488
+    second: Maschera_Rotazione_0
+  - first:
+      213: -4977157398731602776
+    second: Maschera_Rotazione_1
+  - first:
+      213: -6184484924979573988
+    second: Maschera_Rotazione_2
+  - first:
+      213: -9112564765836506386
+    second: Maschera_Rotazione_3
+  - first:
+      213: -5677363692630464873
+    second: Maschera_Rotazione_4
+  - first:
+      213: -5109598814969558484
+    second: Maschera_Rotazione_5
+  - first:
+      213: 5387890013931601700
+    second: Maschera_Rotazione_6
+  - first:
+      213: 6811175626706678145
+    second: Maschera_Rotazione_7
+  - first:
+      213: -6220897947434198054
+    second: Maschera_Rotazione_8
+  - first:
+      213: -8894723768543135986
+    second: Maschera_Rotazione_9
+  - first:
+      213: -8976996473050094395
+    second: Maschera_Rotazione_10
+  - first:
+      213: -807383606789016984
+    second: Maschera_Rotazione_11
+  - first:
+      213: -2369308621343652571
+    second: Maschera_Rotazione_12
+  - first:
+      213: -2975283525772350809
+    second: Maschera_Rotazione_13
+  - first:
+      213: -8100901147339820809
+    second: Maschera_Rotazione_14
+  - first:
+      213: 2953523193593408254
+    second: Maschera_Rotazione_15
+  - first:
+      213: -2129089371551612967
+    second: Maschera_Rotazione_16
+  - first:
+      213: -1718953749889141214
+    second: Maschera_Rotazione_17
+  - first:
+      213: -4371677431890697804
+    second: Maschera_Rotazione_18
+  - first:
+      213: -8280340356477810116
+    second: Maschera_Rotazione_19
+  - first:
+      213: -8287965838885390635
+    second: Maschera_Rotazione_20
+  - first:
+      213: -1460515963188791304
+    second: Maschera_Rotazione_21
+  - first:
+      213: -4870851471091456319
+    second: Maschera_Rotazione_22
+  - first:
+      213: -8893481129442298518
+    second: Maschera_Rotazione_23
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Maschera_Rotazione_0
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 140
+        width: 219
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c393f1007fc7cf70800000000000000
+      internalID: 9207556043158295488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maschera_Rotazione_1
+      rect:
+        serializedVersion: 2
+        x: 493
+        y: 139
+        width: 230
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a4456947b59deab0800000000000000
+      internalID: -4977157398731602776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maschera_Rotazione_2
+      rect:
+        serializedVersion: 2
+        x: 917
+        y: 139
+        width: 257
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1b85df3abb4c2aa0800000000000000
+      internalID: -6184484924979573988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maschera_Rotazione_3
+      rect:
+        serializedVersion: 2
+        x: 1338
+        y: 139
+        width: 295
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eea039b30aaa98180800000000000000
+      internalID: -9112564765836506386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maschera_Rotazione_4
+      rect:
+        serializedVersion: 2
+        x: 1763
+        y: 140
+        width: 334
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 796af003dc3f531b0800000000000000
+      internalID: -5677363692630464873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maschera_Rotazione_5
+      rect:
+        serializedVersion: 2
+        x: 2199
+        y: 140
+        width: 363
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2a8bf813fe0719b0800000000000000
+      internalID: -5109598814969558484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maschera_Rotazione_6
+      rect:
+        serializedVersion: 2
+        x: 2646
+        y: 142
+        width: 377
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42f7441eb61a5ca40800000000000000
+      internalID: 5387890013931601700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maschera_Rotazione_7
+      rect:
+        serializedVersion: 2
+        x: 3101
+        y: 144
+        width: 376
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18176a43528268e50800000000000000
+      internalID: 6811175626706678145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maschera_Rotazione_8
+      rect:
+        serializedVersion: 2
+        x: 3560
+        y: 144
+        width: 361
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: adb5a3bc64eeaa9a0800000000000000
+      internalID: -6220897947434198054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maschera_Rotazione_9
+      rect:
+        serializedVersion: 2
+        x: 4015
+        y: 143
+        width: 344
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0733c8dbd79f8480800000000000000
+      internalID: -8894723768543135986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maschera_Rotazione_10
+      rect:
+        serializedVersion: 2
+        x: 4465
+        y: 143
+        width: 330
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c42ae9154d4b6380800000000000000
+      internalID: -8976996473050094395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maschera_Rotazione_11
+      rect:
+        serializedVersion: 2
+        x: 4909
+        y: 143
+        width: 324
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 862fdd723e89bc4f0800000000000000
+      internalID: -807383606789016984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maschera_Rotazione_12
+      rect:
+        serializedVersion: 2
+        x: 5346
+        y: 143
+        width: 328
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5258a8dac568e1fd0800000000000000
+      internalID: -2369308621343652571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maschera_Rotazione_13
+      rect:
+        serializedVersion: 2
+        x: 5777
+        y: 143
+        width: 341
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7aa6444a56ba5b6d0800000000000000
+      internalID: -2975283525772350809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maschera_Rotazione_14
+      rect:
+        serializedVersion: 2
+        x: 6204
+        y: 144
+        width: 357
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f07140b351d39f80800000000000000
+      internalID: -8100901147339820809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maschera_Rotazione_15
+      rect:
+        serializedVersion: 2
+        x: 6627
+        y: 144
+        width: 372
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: efa230632b50df820800000000000000
+      internalID: 2953523193593408254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maschera_Rotazione_16
+      rect:
+        serializedVersion: 2
+        x: 7052
+        y: 143
+        width: 378
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9df3b993f74f372e0800000000000000
+      internalID: -2129089371551612967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maschera_Rotazione_17
+      rect:
+        serializedVersion: 2
+        x: 7481
+        y: 141
+        width: 372
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22638800cac0528e0800000000000000
+      internalID: -1718953749889141214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maschera_Rotazione_18
+      rect:
+        serializedVersion: 2
+        x: 7919
+        y: 140
+        width: 353
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b1209fa98ea453c0800000000000000
+      internalID: -4371677431890697804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maschera_Rotazione_19
+      rect:
+        serializedVersion: 2
+        x: 8367
+        y: 140
+        width: 322
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3a0fc02152561d80800000000000000
+      internalID: -8280340356477810116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maschera_Rotazione_20
+      rect:
+        serializedVersion: 2
+        x: 8823
+        y: 139
+        width: 285
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d6f9a62bfa3bfc80800000000000000
+      internalID: -8287965838885390635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maschera_Rotazione_21
+      rect:
+        serializedVersion: 2
+        x: 9280
+        y: 139
+        width: 252
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f7385938743bbbe0800000000000000
+      internalID: -1460515963188791304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maschera_Rotazione_22
+      rect:
+        serializedVersion: 2
+        x: 9734
+        y: 139
+        width: 228
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c6a7e7d462476cb0800000000000000
+      internalID: -4870851471091456319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maschera_Rotazione_23
+      rect:
+        serializedVersion: 2
+        x: 10179
+        y: 140
+        width: 219
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a65b3fe4802049480800000000000000
+      internalID: -8893481129442298518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Maschera_Rotazione_0: 9207556043158295488
+      Maschera_Rotazione_1: -4977157398731602776
+      Maschera_Rotazione_10: -8976996473050094395
+      Maschera_Rotazione_11: -807383606789016984
+      Maschera_Rotazione_12: -2369308621343652571
+      Maschera_Rotazione_13: -2975283525772350809
+      Maschera_Rotazione_14: -8100901147339820809
+      Maschera_Rotazione_15: 2953523193593408254
+      Maschera_Rotazione_16: -2129089371551612967
+      Maschera_Rotazione_17: -1718953749889141214
+      Maschera_Rotazione_18: -4371677431890697804
+      Maschera_Rotazione_19: -8280340356477810116
+      Maschera_Rotazione_2: -6184484924979573988
+      Maschera_Rotazione_20: -8287965838885390635
+      Maschera_Rotazione_21: -1460515963188791304
+      Maschera_Rotazione_22: -4870851471091456319
+      Maschera_Rotazione_23: -8893481129442298518
+      Maschera_Rotazione_3: -9112564765836506386
+      Maschera_Rotazione_4: -5677363692630464873
+      Maschera_Rotazione_5: -5109598814969558484
+      Maschera_Rotazione_6: 5387890013931601700
+      Maschera_Rotazione_7: 6811175626706678145
+      Maschera_Rotazione_8: -6220897947434198054
+      Maschera_Rotazione_9: -8894723768543135986
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
