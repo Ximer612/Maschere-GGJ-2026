@@ -68,6 +68,13 @@ public class SubtitlesManager : MonoBehaviour
         if (!enabled)
             return;
 
+        if (enabled && context.performed)
+        {
+            skipToEnd = true;
+            ToSkipText.SetActive(false);
+            KeyToPress.SetActive(false);
+        }
+
         if (shouldDisappearBox && disappearingTimer.isEnd)
         {
             skipToEnd = false;
@@ -78,25 +85,18 @@ public class SubtitlesManager : MonoBehaviour
 
             enabled = false;
         }
-
-        if(enabled && context.performed)
-        {
-            skipToEnd = true;
-            ToSkipText.SetActive(false);
-            KeyToPress.SetActive(false);
-        }
     }
 
     private void Update()
     {
-        //if (MenuScript.IsPaused)
-        //    return;
+        if (PauseMenu.isPaused)
+            return;
 
         if (shouldDisappearBox)
         {
             CloseDialogBox();
         }
-        else if (/*skipToEnd ||*/ subtitlesTimer.Tick(Time.deltaTime))
+        else if (skipToEnd || subtitlesTimer.Tick(Time.deltaTime))
         {
             if (textToShow.Length <= currentCharIndex)
             {

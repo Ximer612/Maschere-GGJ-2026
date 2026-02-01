@@ -1603,13 +1603,33 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8321883134567748770, guid: 6f93f56106c48d247ba3675385a74f34, type: 3}
-      propertyPath: m_ActionEvents.Array.data[3].m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      propertyPath: m_ActionEvents.Array.data[3].m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 4817450650414863899}
+    - target: {fileID: 8321883134567748770, guid: 6f93f56106c48d247ba3675385a74f34, type: 3}
+      propertyPath: m_ActionEvents.Array.data[3].m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 3544594768381712581}
     - target: {fileID: 8321883134567748770, guid: 6f93f56106c48d247ba3675385a74f34, type: 3}
       propertyPath: m_ActionEvents.Array.data[4].m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 3488770277357667966}
+    - target: {fileID: 8321883134567748770, guid: 6f93f56106c48d247ba3675385a74f34, type: 3}
+      propertyPath: m_ActionEvents.Array.data[3].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SkipToEnd
+      objectReference: {fileID: 0}
+    - target: {fileID: 8321883134567748770, guid: 6f93f56106c48d247ba3675385a74f34, type: 3}
+      propertyPath: m_ActionEvents.Array.data[3].m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: CheckInteraction
+      objectReference: {fileID: 0}
+    - target: {fileID: 8321883134567748770, guid: 6f93f56106c48d247ba3675385a74f34, type: 3}
+      propertyPath: m_ActionEvents.Array.data[3].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SubtitlesManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8321883134567748770, guid: 6f93f56106c48d247ba3675385a74f34, type: 3}
+      propertyPath: m_ActionEvents.Array.data[3].m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: InteractionController, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 8934636235294886599, guid: 6f93f56106c48d247ba3675385a74f34, type: 3}
       propertyPath: cameraPositionComposer
       value: 
@@ -1639,6 +1659,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9fdcde3f10b60249bb63ed11f6af799, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UnparentMe
+--- !u!114 &3544594768381712581 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2612035372152779383, guid: 6f93f56106c48d247ba3675385a74f34, type: 3}
+  m_PrefabInstance: {fileID: 1517500308655336114}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1264994098442542239}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c303f22e7aaf88bebf4970b4a401354, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InteractionController
 --- !u!4 &6360461184220200656 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5569786994452108386, guid: 6f93f56106c48d247ba3675385a74f34, type: 3}
