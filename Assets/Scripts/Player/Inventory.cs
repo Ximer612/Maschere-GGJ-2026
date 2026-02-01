@@ -16,7 +16,7 @@ public struct Mask
 
 public class Inventory : MonoBehaviour
 {
-    private static Inventory Singleton;
+    public static Inventory Singleton;
 
     public Dictionary<MaskEnum, MaskStatusEnum> masks = new Dictionary<MaskEnum, MaskStatusEnum>();
     public List<Mask> readonlyMasksArray;
@@ -41,9 +41,9 @@ public class Inventory : MonoBehaviour
         }
     }
 
-    public void SetArlecchinoBroken() { setMaskStatus(MaskEnum.Arlecchino, MaskStatusEnum.BROKEN); }
+    public void SetArlecchinoBroken() { SetMaskStatus(MaskEnum.Arlecchino, MaskStatusEnum.BROKEN); }
 
-    private void setMaskStatus(MaskEnum mask, MaskStatusEnum status)
+    public void SetMaskStatus(MaskEnum mask, MaskStatusEnum status)
     {
         masks[mask] = status;
         Debug.Log($"Set {mask} to {status}");
